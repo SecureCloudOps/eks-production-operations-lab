@@ -1,0 +1,82 @@
+[
+  {
+    "labels": {
+      "container": "kube-state-metrics",
+      "endpoint": "http",
+      "instance": "private-ip-05:8080",
+      "job": "kube-state-metrics",
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp",
+      "service": "kube-prometheus-stack-kube-state-metrics"
+    },
+    "scrapeUrl": "http://private-ip-05:8080/metrics",
+    "health": "up",
+    "lastError": "",
+    "scrapeInterval": "30s",
+    "lastScrape": "2026-09-08T22:45:46.14073475Z"
+  },
+  {
+    "labels": {
+      "endpoint": "https-metrics",
+      "instance": "private-ip-03:10250",
+      "job": "kubelet",
+      "metrics_path": "/metrics/cadvisor",
+      "namespace": "kube-system",
+      "node": "system-node",
+      "service": "kube-prometheus-stack-kubelet"
+    },
+    "scrapeUrl": "https://private-ip-03:10250/metrics/cadvisor",
+    "health": "up",
+    "lastError": "",
+    "scrapeInterval": "10s",
+    "lastScrape": "2026-09-08T22:46:10.47704176Z"
+  },
+  {
+    "labels": {
+      "endpoint": "https-metrics",
+      "instance": "private-ip-01:10250",
+      "job": "kubelet",
+      "metrics_path": "/metrics/cadvisor",
+      "namespace": "kube-system",
+      "node": "apps-node-a",
+      "service": "kube-prometheus-stack-kubelet"
+    },
+    "scrapeUrl": "https://private-ip-01:10250/metrics/cadvisor",
+    "health": "up",
+    "lastError": "",
+    "scrapeInterval": "10s",
+    "lastScrape": "2026-09-08T22:46:09.082244152Z"
+  },
+  {
+    "labels": {
+      "endpoint": "https-metrics",
+      "instance": "private-ip-08:10250",
+      "job": "kubelet",
+      "metrics_path": "/metrics/cadvisor",
+      "namespace": "kube-system",
+      "node": "canary-node",
+      "service": "kube-prometheus-stack-kubelet"
+    },
+    "scrapeUrl": "https://private-ip-08:10250/metrics/cadvisor",
+    "health": "up",
+    "lastError": "",
+    "scrapeInterval": "10s",
+    "lastScrape": "2026-09-08T22:46:02.536114582Z"
+  },
+  {
+    "labels": {
+      "endpoint": "https-metrics",
+      "instance": "private-ip-06:10250",
+      "job": "kubelet",
+      "metrics_path": "/metrics/cadvisor",
+      "namespace": "kube-system",
+      "node": "apps-node-b",
+      "service": "kube-prometheus-stack-kubelet"
+    },
+    "scrapeUrl": "https://private-ip-06:10250/metrics/cadvisor",
+    "health": "up",
+    "lastError": "",
+    "scrapeInterval": "10s",
+    "lastScrape": "2026-09-08T22:46:08.297617696Z"
+  }
+]

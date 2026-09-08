@@ -1,0 +1,64 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:41:21Z
+RAW=<private-run-directory>
+eks-operations-lab
+NAME                          STATUS   ROLES    AGE     VERSION               WORKLOAD
+apps-node-a   Ready    <none>   83m     v1.36.1-eks-a3a0722   production-apps
+system-node   Ready    <none>   169m    v1.36.1-eks-a3a0722   system
+apps-node-b   Ready    <none>   3h22m   v1.36.1-eks-a3a0722   production-apps
+canary-node     Ready    <none>   3h45m   v1.36.1-eks-a3a0722   canary
+{
+  "name": "canary-node",
+  "unschedulable": false,
+  "taints": [
+    {
+      "effect": "NoSchedule",
+      "key": "workload",
+      "value": "canary"
+    }
+  ],
+  "allocatable": {
+    "cpu": "1930m",
+    "ephemeral-storage": "27855001962",
+    "hugepages-1Gi": "0",
+    "hugepages-2Mi": "0",
+    "memory": "1465512Ki",
+    "pods": "11"
+  },
+  "conditions": [
+    {
+      "lastHeartbeatTime": "2026-09-08T22:40:38Z",
+      "lastTransitionTime": "2026-09-08T18:56:18Z",
+      "message": "kubelet has sufficient memory available",
+      "reason": "KubeletHasSufficientMemory",
+      "status": "False",
+      "type": "MemoryPressure"
+    },
+    {
+      "lastHeartbeatTime": "2026-09-08T22:40:38Z",
+      "lastTransitionTime": "2026-09-08T18:56:33Z",
+      "message": "kubelet is posting ready status",
+      "reason": "KubeletReady",
+      "status": "True",
+      "type": "Ready"
+    }
+  ]
+}
+NAME                                                        READY   STATUS    RESTARTS   AGE     IP            NODE                          NOMINATED NODE   READINESS GATES
+kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l              3/3     Running   0          70m     private-ip-04    apps-node-a   <none>           <none>
+kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp   1/1     Running   0          3h15m   private-ip-05   apps-node-b   <none>           <none>
+kube-prometheus-stack-operator-7fd66ffc65-sjt6v             1/1     Running   0          70m     private-ip-02   apps-node-a   <none>           <none>
+kube-prometheus-stack-prometheus-node-exporter-jn2vl        1/1     Running   0          169m    private-ip-03   system-node   <none>           <none>
+kube-prometheus-stack-prometheus-node-exporter-ndzmg        1/1     Running   0          3h45m   private-ip-08     canary-node     <none>           <none>
+kube-prometheus-stack-prometheus-node-exporter-q9lcz        1/1     Running   0          3h22m   private-ip-06   apps-node-b   <none>           <none>
+kube-prometheus-stack-prometheus-node-exporter-wqm8k        1/1     Running   0          83m     private-ip-01   apps-node-a   <none>           <none>
+prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          3h7m    private-ip-07    apps-node-b   <none>           <none>
+NAME                                             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+kube-prometheus-stack-grafana                    ClusterIP   private-ip-13   <none>        80/TCP              7h21m
+kube-prometheus-stack-kube-state-metrics         ClusterIP   private-ip-10   <none>        8080/TCP            7h21m
+kube-prometheus-stack-operator                   ClusterIP   private-ip-12   <none>        443/TCP             7h21m
+kube-prometheus-stack-prometheus                 ClusterIP   private-ip-11   <none>        9090/TCP,8080/TCP   7h21m
+kube-prometheus-stack-prometheus-node-exporter   ClusterIP   private-ip-14    <none>        9100/TCP            7h21m
+prometheus-operated                              ClusterIP   None             <none>        9090/TCP            7h21m
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+http-demo   2/2     2            2           7h15m

@@ -1,0 +1,2450 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:49:50Z
+{
+  "observedAt": "2026-09-08T22:49:51Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:49:56Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:02Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:07Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:13Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:18Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:24Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:29Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:35Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:40Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:45Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:51Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:50:56Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:02Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:07Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:13Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:18Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:24Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:29Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:35Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:40Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:45Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:51Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:51:56Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:02Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:07Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:13Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:18Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:24Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:29Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:35Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:40Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:45Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:51Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:52:56Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:02Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:07Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:13Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:18Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:24Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:29Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:35Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:40Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:46Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:51Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:53:57Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:54:02Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "observedAt": "2026-09-08T22:54:08Z",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://dc1726cf9ba93e444de02e6e34cbdead73ef7fde04d6b1a41d0141a619974684",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {
+        "terminated": {
+          "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+          "exitCode": 137,
+          "finishedAt": "2026-09-08T22:54:03Z",
+          "reason": "OOMKilled",
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 1,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:54:04Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+{
+  "pod": "memory-leak-5469b688d4-wq2r9",
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "containers": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://dc1726cf9ba93e444de02e6e34cbdead73ef7fde04d6b1a41d0141a619974684",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {
+        "terminated": {
+          "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+          "exitCode": 137,
+          "finishedAt": "2026-09-08T22:54:03Z",
+          "reason": "OOMKilled",
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 1,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:54:04Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+2026-09-08T22:49:32.891271606Z Starting intentional memory leak; limit is 128Mi
+2026-09-08T22:51:32.894123790Z Retained 4 MiB of payload
+2026-09-08T22:51:37.897787635Z Retained 8 MiB of payload
+2026-09-08T22:51:42.900773761Z Retained 12 MiB of payload
+2026-09-08T22:51:47.903631001Z Retained 16 MiB of payload
+2026-09-08T22:51:52.906591651Z Retained 20 MiB of payload
+2026-09-08T22:51:57.909476498Z Retained 24 MiB of payload
+2026-09-08T22:52:02.912829310Z Retained 28 MiB of payload
+2026-09-08T22:52:07.915822317Z Retained 32 MiB of payload
+2026-09-08T22:52:12.919512273Z Retained 36 MiB of payload
+2026-09-08T22:52:17.922511993Z Retained 40 MiB of payload
+2026-09-08T22:52:22.925517292Z Retained 44 MiB of payload
+2026-09-08T22:52:27.928583315Z Retained 48 MiB of payload
+2026-09-08T22:52:32.931533046Z Retained 52 MiB of payload
+2026-09-08T22:52:37.934586986Z Retained 56 MiB of payload
+2026-09-08T22:52:42.937537232Z Retained 60 MiB of payload
+2026-09-08T22:52:47.940617481Z Retained 64 MiB of payload
+2026-09-08T22:52:52.943592382Z Retained 68 MiB of payload
+2026-09-08T22:52:57.946588027Z Retained 72 MiB of payload
+2026-09-08T22:53:02.949899839Z Retained 76 MiB of payload
+2026-09-08T22:53:07.953142914Z Retained 80 MiB of payload
+2026-09-08T22:53:12.956447263Z Retained 84 MiB of payload
+2026-09-08T22:53:17.959554112Z Retained 88 MiB of payload
+2026-09-08T22:53:22.962582933Z Retained 92 MiB of payload
+2026-09-08T22:53:27.965512761Z Retained 96 MiB of payload
+2026-09-08T22:53:32.968435225Z Retained 100 MiB of payload
+2026-09-08T22:53:37.971304415Z Retained 104 MiB of payload
+2026-09-08T22:53:42.974353960Z Retained 108 MiB of payload
+2026-09-08T22:53:47.977188989Z Retained 112 MiB of payload
+2026-09-08T22:53:52.980757357Z Retained 116 MiB of payload
+2026-09-08T22:53:57.983876173Z Retained 120 MiB of payload
+
+previous_logs_exit_code=0
+LAST SEEN   TYPE     REASON      OBJECT                             MESSAGE
+4m40s       Normal   Scheduled   pod/memory-leak-5469b688d4-wq2r9   Successfully assigned lab03/memory-leak-5469b688d4-wq2r9 to canary-node
+4m39s       Normal   Pulling     pod/memory-leak-5469b688d4-wq2r9   Pulling image "python:3.12.10-alpine3.21"
+4m37s       Normal   Pulled      pod/memory-leak-5469b688d4-wq2r9   Successfully pulled image "python:3.12.10-alpine3.21" in 1.406s (1.406s including waiting). Image size: 17784555 bytes.
+5s          Normal   Created     pod/memory-leak-5469b688d4-wq2r9   Container created
+5s          Normal   Started     pod/memory-leak-5469b688d4-wq2r9   Container started
+5s          Normal   Pulled      pod/memory-leak-5469b688d4-wq2r9   Container image "python:3.12.10-alpine3.21" already present on machine and can be accessed by the pod
+Name:             memory-leak-5469b688d4-wq2r9
+Namespace:        lab03
+Priority:         0
+Service Account:  default
+Node:             canary-node/private-ip-08
+Start Time:       Tue, 08 Sep 2026 18:49:29 -0400
+Labels:           app=memory-leak
+                  pod-template-hash=5469b688d4
+                  topology.kubernetes.io/region=us-east-1
+                  topology.kubernetes.io/zone=us-east-1a
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               private-ip-09
+IPs:
+  IP:           private-ip-09
+Controlled By:  ReplicaSet/memory-leak-5469b688d4
+Containers:
+  memory-leak:
+    Container ID:  containerd://dc1726cf9ba93e444de02e6e34cbdead73ef7fde04d6b1a41d0141a619974684
+    Image:         python:3.12.10-alpine3.21
+    Image ID:      docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -u
+      -c
+    Args:
+      import time
+
+      # Allow monitoring to discover the container before growth starts.
+      print("Starting intentional memory leak; limit is 128Mi", flush=True)
+      time.sleep(120)
+      retained = []
+      chunk_bytes = 4 * 1024 * 1024
+      while True:
+          chunk = bytearray(chunk_bytes)
+          # Touch every page so allocation consumes physical memory.
+          for offset in range(0, chunk_bytes, 4096):
+              chunk[offset] = 1
+          retained.append(chunk)
+          print(f"Retained {len(retained) * 4} MiB of payload", flush=True)
+          time.sleep(5)
+
+    State:          Running
+      Started:      Tue, 08 Sep 2026 18:54:04 -0400
+    Last State:     Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Tue, 08 Sep 2026 18:49:32 -0400
+      Finished:     Tue, 08 Sep 2026 18:54:03 -0400
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     100m
+      memory:  128Mi
+    Requests:
+      cpu:        25m
+      memory:     32Mi
+    Environment:  <none>
+    Mounts:       <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               workload=canary
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+                              workload=canary:NoSchedule
+Events:
+  Type    Reason     Age                 From               Message
+  ----    ------     ----                ----               -------
+  Normal  Scheduled  4m41s               default-scheduler  Successfully assigned lab03/memory-leak-5469b688d4-wq2r9 to canary-node
+  Normal  Pulling    4m40s               kubelet            spec.containers{memory-leak}: Pulling image "python:3.12.10-alpine3.21"
+  Normal  Pulled     4m38s               kubelet            spec.containers{memory-leak}: Successfully pulled image "python:3.12.10-alpine3.21" in 1.406s (1.406s including waiting). Image size: 17784555 bytes.
+  Normal  Created    6s (x2 over 4m38s)  kubelet            spec.containers{memory-leak}: Container created
+  Normal  Started    6s (x2 over 4m38s)  kubelet            spec.containers{memory-leak}: Container started
+  Normal  Pulled     6s                  kubelet            spec.containers{memory-leak}: Container image "python:3.12.10-alpine3.21" already present on machine and can be accessed by the pod
+Name:               canary-node
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=t3.small
+                    beta.kubernetes.io/os=linux
+                    eks.amazonaws.com/capacityType=ON_DEMAND
+                    eks.amazonaws.com/nodegroup=canary-nodegroup
+                    eks.amazonaws.com/nodegroup-image=ami-07ecc2f05e58aae70
+                    eks.amazonaws.com/sourceLaunchTemplateId=lt-04049620f147d5c77
+                    eks.amazonaws.com/sourceLaunchTemplateVersion=1
+                    failure-domain.beta.kubernetes.io/region=us-east-1
+                    failure-domain.beta.kubernetes.io/zone=us-east-1a
+                    k8s.io/cloud-provider-aws=e946193cde7f6e0fc94e55a92c565eaa
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=canary-node
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=t3.small
+                    topology.k8s.aws/zone-id=use1-az2
+                    topology.kubernetes.io/region=us-east-1
+                    topology.kubernetes.io/zone=us-east-1a
+                    workload=canary
+Annotations:        alpha.kubernetes.io/provided-node-ip: private-ip-08
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 08 Sep 2026 14:56:19 -0400
+Taints:             workload=canary:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  canary-node
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 08 Sep 2026 18:54:09 -0400
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 08 Sep 2026 18:49:59 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 08 Sep 2026 18:49:59 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 08 Sep 2026 18:49:59 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 08 Sep 2026 18:49:59 -0400   Tue, 08 Sep 2026 14:56:33 -0400   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:   private-ip-08
+  InternalDNS:  canary-node
+  Hostname:     canary-node
+Capacity:
+  cpu:                2
+  ephemeral-storage:  30654Mi
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             1952936Ki
+  pods:               11
+Allocatable:
+  cpu:                1930m
+  ephemeral-storage:  27855001962
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             1465512Ki
+  pods:               11
+System Info:
+  Machine ID:                 <host-identity>
+  System UUID:                <host-identity>
+  Boot ID:                    <host-identity>
+  Kernel Version:             6.18.38
+  OS Image:                   Bottlerocket OS 1.64.0 (aws-k8s-1.36)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.5+bottlerocket
+  Kubelet Version:            v1.36.1-eks-a3a0722
+  Kube-Proxy Version:
+ProviderID:                   aws:///us-east-1a/instance-01
+Non-terminated Pods:          (5 in total)
+  Namespace                   Name                                                    CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                    ------------  ----------  ---------------  -------------  ---
+  kube-system                 aws-node-jz74l                                          50m (2%)      0 (0%)      0 (0%)           0 (0%)         3h57m
+  kube-system                 eks-pod-identity-agent-zbx78                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h57m
+  kube-system                 kube-proxy-gc2jm                                        100m (5%)     0 (0%)      0 (0%)           0 (0%)         3h57m
+  lab03                       memory-leak-5469b688d4-wq2r9                            25m (1%)      100m (5%)   32Mi (2%)        128Mi (8%)     4m42s
+  monitoring                  kube-prometheus-stack-prometheus-node-exporter-ndzmg    25m (1%)      0 (0%)      32Mi (2%)        128Mi (8%)     3h57m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests    Limits
+  --------           --------    ------
+  cpu                200m (10%)  100m (5%)
+  memory             64Mi (4%)   256Mi (17%)
+  ephemeral-storage  0 (0%)      0 (0%)
+  hugepages-1Gi      0 (0%)      0 (0%)
+  hugepages-2Mi      0 (0%)      0 (0%)
+Events:              <none>
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS     AGE     IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0            3h57m   private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0            3h57m   private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0            3h57m   private-ip-08   canary-node   <none>           <none>
+lab03         memory-leak-5469b688d4-wq2r9                           1/1     Running   1 (8s ago)   4m42s   private-ip-09   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0            3h57m   private-ip-08   canary-node   <none>           <none>
+No resources found
+
+--- Containment ---
+2026-09-08T22:56:35Z
+deployment.apps/memory-leak scaled
+pod/memory-leak-5469b688d4-wq2r9 condition met
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+memory-leak   0/0     0            0           7m39s
+{
+  "lastHeartbeatTime": "2026-09-08T22:56:37Z",
+  "lastTransitionTime": "2026-09-08T18:56:18Z",
+  "message": "kubelet has sufficient memory available",
+  "reason": "KubeletHasSufficientMemory",
+  "status": "False",
+  "type": "MemoryPressure"
+}
+{
+  "lastHeartbeatTime": "2026-09-08T22:56:37Z",
+  "lastTransitionTime": "2026-09-08T18:56:33Z",
+  "message": "kubelet is posting ready status",
+  "reason": "KubeletReady",
+  "status": "True",
+  "type": "Ready"
+}
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE   IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+
+--- Final state ---
+2026-09-08T22:58:32Z
+namespace "lab03" deleted
+deployment.apps "memory-leak" deleted from lab03 namespace
+Lab 3 namespace absent
+node/canary-node condition met
+NAME                          STATUS   ROLES    AGE     VERSION
+apps-node-a   Ready    <none>   101m    v1.36.1-eks-a3a0722
+system-node   Ready    <none>   3h7m    v1.36.1-eks-a3a0722
+apps-node-b   Ready    <none>   3h39m   v1.36.1-eks-a3a0722
+canary-node     Ready    <none>   4h2m    v1.36.1-eks-a3a0722
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE    IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/http-demo   2/2     2            2           7h32m
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/http-demo   1               N/A               1                     7h32m
+NAME                                                        READY   STATUS    RESTARTS   AGE
+kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l              3/3     Running   0          87m
+kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp   1/1     Running   0          3h33m
+kube-prometheus-stack-operator-7fd66ffc65-sjt6v             1/1     Running   0          87m
+kube-prometheus-stack-prometheus-node-exporter-jn2vl        1/1     Running   0          3h7m
+kube-prometheus-stack-prometheus-node-exporter-ndzmg        1/1     Running   0          4h2m
+kube-prometheus-stack-prometheus-node-exporter-q9lcz        1/1     Running   0          3h40m
+kube-prometheus-stack-prometheus-node-exporter-wqm8k        1/1     Running   0          101m
+prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          3h25m

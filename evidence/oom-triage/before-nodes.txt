@@ -1,0 +1,161 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:49:27Z
+Name:               canary-node
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=t3.small
+                    beta.kubernetes.io/os=linux
+                    eks.amazonaws.com/capacityType=ON_DEMAND
+                    eks.amazonaws.com/nodegroup=canary-nodegroup
+                    eks.amazonaws.com/nodegroup-image=ami-07ecc2f05e58aae70
+                    eks.amazonaws.com/sourceLaunchTemplateId=lt-04049620f147d5c77
+                    eks.amazonaws.com/sourceLaunchTemplateVersion=1
+                    failure-domain.beta.kubernetes.io/region=us-east-1
+                    failure-domain.beta.kubernetes.io/zone=us-east-1a
+                    k8s.io/cloud-provider-aws=e946193cde7f6e0fc94e55a92c565eaa
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=canary-node
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=t3.small
+                    topology.k8s.aws/zone-id=use1-az2
+                    topology.kubernetes.io/region=us-east-1
+                    topology.kubernetes.io/zone=us-east-1a
+                    workload=canary
+Annotations:        alpha.kubernetes.io/provided-node-ip: private-ip-08
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 08 Sep 2026 14:56:19 -0400
+Taints:             workload=canary:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  canary-node
+  AcquireTime:     <unset>
+  RenewTime:       Tue, 08 Sep 2026 18:49:24 -0400
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Tue, 08 Sep 2026 18:45:44 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Tue, 08 Sep 2026 18:45:44 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Tue, 08 Sep 2026 18:45:44 -0400   Tue, 08 Sep 2026 14:56:18 -0400   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Tue, 08 Sep 2026 18:45:44 -0400   Tue, 08 Sep 2026 14:56:33 -0400   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:   private-ip-08
+  InternalDNS:  canary-node
+  Hostname:     canary-node
+Capacity:
+  cpu:                2
+  ephemeral-storage:  30654Mi
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             1952936Ki
+  pods:               11
+Allocatable:
+  cpu:                1930m
+  ephemeral-storage:  27855001962
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             1465512Ki
+  pods:               11
+System Info:
+  Machine ID:                 <host-identity>
+  System UUID:                <host-identity>
+  Boot ID:                    <host-identity>
+  Kernel Version:             6.18.38
+  OS Image:                   Bottlerocket OS 1.64.0 (aws-k8s-1.36)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://2.2.5+bottlerocket
+  Kubelet Version:            v1.36.1-eks-a3a0722
+  Kube-Proxy Version:
+ProviderID:                   aws:///us-east-1a/instance-01
+Non-terminated Pods:          (4 in total)
+  Namespace                   Name                                                    CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                                    ------------  ----------  ---------------  -------------  ---
+  kube-system                 aws-node-jz74l                                          50m (2%)      0 (0%)      0 (0%)           0 (0%)         3h53m
+  kube-system                 eks-pod-identity-agent-zbx78                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         3h53m
+  kube-system                 kube-proxy-gc2jm                                        100m (5%)     0 (0%)      0 (0%)           0 (0%)         3h53m
+  monitoring                  kube-prometheus-stack-prometheus-node-exporter-ndzmg    25m (1%)      0 (0%)      32Mi (2%)        128Mi (8%)     3h53m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests   Limits
+  --------           --------   ------
+  cpu                175m (9%)  0 (0%)
+  memory             32Mi (2%)  128Mi (8%)
+  ephemeral-storage  0 (0%)     0 (0%)
+  hugepages-1Gi      0 (0%)     0 (0%)
+  hugepages-2Mi      0 (0%)     0 (0%)
+Events:              <none>
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE     IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0          3h53m   private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0          3h53m   private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0          3h53m   private-ip-08   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0          3h53m   private-ip-08   canary-node   <none>           <none>
+2026-09-08T22:49:33Z
+NAME                           READY   STATUS    RESTARTS   AGE   IP          NODE                        NOMINATED NODE   READINESS GATES
+memory-leak-5469b688d4-wq2r9   1/1     Running   0          4s    private-ip-09   canary-node   <none>           <none>
+{
+  "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+  "qos": "Burstable",
+  "containers": [
+    {
+      "name": "memory-leak",
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      }
+    }
+  ],
+  "status": [
+    {
+      "allocatedResources": {
+        "cpu": "25m",
+        "memory": "32Mi"
+      },
+      "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+      "image": "docker.io/library/python:3.12.10-alpine3.21",
+      "imageID": "docker.io/library/python@sha256:9c51ecce261773a684c8345b2d4673700055c513b4d54bc0719337d3e4ee552e",
+      "lastState": {},
+      "name": "memory-leak",
+      "ready": true,
+      "resources": {
+        "limits": {
+          "cpu": "100m",
+          "memory": "128Mi"
+        },
+        "requests": {
+          "cpu": "25m",
+          "memory": "32Mi"
+        }
+      },
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-09-08T22:49:32Z"
+        }
+      },
+      "user": {
+        "linux": {
+          "gid": 10001,
+          "supplementalGroups": [
+            10001
+          ],
+          "uid": 10001
+        }
+      }
+    }
+  ]
+}
+
+Baseline memory query: container_memory_working_set_bytes{namespace="lab03",pod="memory-leak-5469b688d4-wq2r9",container="memory-leak"}
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"container_memory_working_set_bytes","container":"memory-leak","endpoint":"https-metrics","id":"/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pode2c77e48_cc8d_4a59_b155_ded5c9c49841.slice/cri-containerd-e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee.scope","image":"docker.io/library/python:3.12.10-alpine3.21","instance":"private-ip-08:10250","job":"kubelet","metrics_path":"/metrics/cadvisor","name":"e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee","namespace":"lab03","node":"canary-node","pod":"memory-leak-5469b688d4-wq2r9","service":"kube-prometheus-stack-kubelet"},"value":[1788907789.714,"4440064"]}]}}
+Baseline restarts query: kube_pod_container_status_restarts_total{namespace="lab03",pod="memory-leak-5469b688d4-wq2r9",container="memory-leak"}
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"kube_pod_container_status_restarts_total","container":"memory-leak","endpoint":"http","instance":"private-ip-05:8080","job":"kube-state-metrics","namespace":"lab03","pod":"memory-leak-5469b688d4-wq2r9","service":"kube-prometheus-stack-kube-state-metrics","uid":"e2c77e48-cc8d-4a59-b155-ded5c9c49841"},"value":[1788907789.832,"0"]}]}}
+Baseline logs:
+2026-09-08T22:49:32.891271606Z Starting intentional memory leak; limit is 128Mi

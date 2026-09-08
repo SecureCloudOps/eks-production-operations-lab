@@ -1,0 +1,42 @@
+{
+  "run": "lab03-20260908T224928Z",
+  "source": "Operator-executed commands saved locally; assistant reviewed captures without direct cluster execution.",
+  "transformations": [
+    "Trailing whitespace removed from publication copies",
+    "Private addresses and node names replaced with stable aliases within Lab 3",
+    "Instance IDs, host identities, generated node-group suffixes and local path sanitized",
+    "Pod UIDs and container IDs retained to distinguish container instances",
+    "Containment and final state appended to workload-health.txt",
+    "Recovery instant query appended to prometheus-results.txt",
+    "placement-and-restarts.json projects identity, placement, resources and status from four private snapshots; full snapshots excluded"
+  ],
+  "raw_sha256": {
+    "preflight.txt": "e191188acd5d4eea854a1ec5fb7b4d0bc9550677b1889cb82183dccf24d461ce",
+    "before-nodes.txt": "b528a951b0346c51b6bde3d1d16d0f576f97ad934e049c6647a906faf5f0698b",
+    "workload-health.txt": "0b0ca949ec1401c3eeecec1ad234d826d33339a370efb48cdd8f594e1617ed0c",
+    "prometheus-results.txt": "82963101af71c4db3f97be1da05ff1239c421c0983f853130e96c06c5fd6de50",
+    "containment.txt": "f96c001e784755a95159dfb6167ede0a78ea82312bf820287a3ec2fde74a3654",
+    "after-state.txt": "29d2c9f8b23a1b8c6417b3f6cee97ca8bd8fb25ae4fdb3a0ccb9b7ff7f2816e3",
+    "recovery-metrics.json": "ba6d498680d81e5fe0d06a3c01c96311c3d0d39458a5315dfb5a35c88bfa8db4",
+    "scrape-health.json": "8a9f0546bbac21c8a217c2f0997dba59d934786c5795eb25a11c2026a07c22a3",
+    "previous-logs.txt": "5c793180175c9c4edbd233beb3502c09e8707bd1a2d578f3bdea128522914d90",
+    "oom-summary.json": "17b0155bbed83360e5349eaa38be0c3fd86add3643e65997caa94b48629d0df9",
+    "neighbors-before.json": "4b9c93e9726a475ff36fc495bc5ba3082eead42093036be4f82324b5cd622d83",
+    "neighbors-after-oom.json": "26ba0c52178e3eb2ad22ed7520ec82f85389533363f7a576d489f2b2ffe78650",
+    "monitoring-before.json": "0b3d6a82875579a1bb338d0002b45af6ba937cbac3386a307883ce20da7452d4",
+    "monitoring-after.json": "0b3d6a82875579a1bb338d0002b45af6ba937cbac3386a307883ce20da7452d4"
+  },
+  "sanitized_sha256": {
+    "preflight.txt": "c5a9c449d2c1c01b8d419a037cf04aaea410528989d25d26ac0b98324c3ce369",
+    "before-nodes.txt": "c5144d314a631cc9623830dfe3b06c37cfee53b023a41d0d81245ab0b2f143b7",
+    "workload-health.txt": "8434a635e892594f696618f96e1cb242083caae6c247a2ab01c5cc889d97199c",
+    "prometheus-results.txt": "7bc2827f161e29aa5a14b5983f4f95b6d2b3b3292fbb2f721340f311ae4a9287",
+    "containment.txt": "484bbdf5054e3b7d6716d6350b90ef0b2d68c09aa43a6fbeea5099c7d23698fd",
+    "after-state.txt": "89cd58dbc13feea33490f1d7f1b96492bd7e045d22ae87d656b34ef2dad80171",
+    "recovery-metrics.json": "d8b52c95f18c16b53baa5f4117a1bbfb38ccfb82fb98bf022507b589bb84cdd4",
+    "scrape-health.json": "5f48d6f17f67f4d07c5bc470f12841e5ddaf6fbe7c222d1a2d3a12106c140fd3",
+    "previous-logs.txt": "1abf36c9494bb5e1bf356d0f5ab3a10448fd51477e4b75c288dc77dc38687194",
+    "oom-summary.json": "17b0155bbed83360e5349eaa38be0c3fd86add3643e65997caa94b48629d0df9",
+    "placement-and-restarts.json": "cdb1a634da575f8a856745dab6df377c2c93c96ea5dae903661a943e2ad5a4cc"
+  }
+}

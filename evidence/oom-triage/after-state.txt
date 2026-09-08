@@ -1,0 +1,30 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:58:32Z
+namespace "lab03" deleted
+deployment.apps "memory-leak" deleted from lab03 namespace
+Lab 3 namespace absent
+node/canary-node condition met
+NAME                          STATUS   ROLES    AGE     VERSION
+apps-node-a   Ready    <none>   101m    v1.36.1-eks-a3a0722
+system-node   Ready    <none>   3h7m    v1.36.1-eks-a3a0722
+apps-node-b   Ready    <none>   3h39m   v1.36.1-eks-a3a0722
+canary-node     Ready    <none>   4h2m    v1.36.1-eks-a3a0722
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE    IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0          4h2m   private-ip-08   canary-node   <none>           <none>
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/http-demo   2/2     2            2           7h32m
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/http-demo   1               N/A               1                     7h32m
+NAME                                                        READY   STATUS    RESTARTS   AGE
+kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l              3/3     Running   0          87m
+kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp   1/1     Running   0          3h33m
+kube-prometheus-stack-operator-7fd66ffc65-sjt6v             1/1     Running   0          87m
+kube-prometheus-stack-prometheus-node-exporter-jn2vl        1/1     Running   0          3h7m
+kube-prometheus-stack-prometheus-node-exporter-ndzmg        1/1     Running   0          4h2m
+kube-prometheus-stack-prometheus-node-exporter-q9lcz        1/1     Running   0          3h40m
+kube-prometheus-stack-prometheus-node-exporter-wqm8k        1/1     Running   0          101m
+prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          3h25m

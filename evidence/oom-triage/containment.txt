@@ -1,0 +1,27 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:56:35Z
+deployment.apps/memory-leak scaled
+pod/memory-leak-5469b688d4-wq2r9 condition met
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+memory-leak   0/0     0            0           7m39s
+{
+  "lastHeartbeatTime": "2026-09-08T22:56:37Z",
+  "lastTransitionTime": "2026-09-08T18:56:18Z",
+  "message": "kubelet has sufficient memory available",
+  "reason": "KubeletHasSufficientMemory",
+  "status": "False",
+  "type": "MemoryPressure"
+}
+{
+  "lastHeartbeatTime": "2026-09-08T22:56:37Z",
+  "lastTransitionTime": "2026-09-08T18:56:33Z",
+  "message": "kubelet is posting ready status",
+  "reason": "KubeletReady",
+  "status": "True",
+  "type": "Ready"
+}
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE   IP          NODE                        NOMINATED NODE   READINESS GATES
+kube-system   aws-node-jz74l                                         2/2     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+kube-system   eks-pod-identity-agent-zbx78                           1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+kube-system   kube-proxy-gc2jm                                       1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-ndzmg   1/1     Running   0          4h    private-ip-08   canary-node   <none>           <none>

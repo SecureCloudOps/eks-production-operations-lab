@@ -1,0 +1,1022 @@
+{
+  "neighbors-before.json": [
+    {
+      "namespace": "kube-system",
+      "pod": "aws-node-jz74l",
+      "uid": "700e80c5-28c8-41cb-9748-dde98e534658",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "aws-node",
+          "resources": {
+            "requests": {
+              "cpu": "25m"
+            }
+          }
+        },
+        {
+          "name": "aws-eks-nodeagent",
+          "resources": {
+            "requests": {
+              "cpu": "25m"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "aws-eks-nodeagent",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:32Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "aws-node",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:30Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "kube-system",
+      "pod": "eks-pod-identity-agent-zbx78",
+      "uid": "c525e362-682d-40f9-a462-2e0aa347284a",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "BestEffort",
+      "resources": [
+        {
+          "name": "eks-pod-identity-agent",
+          "resources": {}
+        }
+      ],
+      "status": [
+        {
+          "name": "eks-pod-identity-agent",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:28Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "kube-system",
+      "pod": "kube-proxy-gc2jm",
+      "uid": "39f2e9fd-8fab-4cd0-9efe-41a7fb7aafd9",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-proxy",
+          "resources": {
+            "requests": {
+              "cpu": "100m"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-proxy",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-ndzmg",
+      "uid": "f2c1f044-7b93-4f27-b67a-7e4ac5fc41db",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ],
+  "neighbors-after-oom.json": [
+    {
+      "namespace": "kube-system",
+      "pod": "aws-node-jz74l",
+      "uid": "700e80c5-28c8-41cb-9748-dde98e534658",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "aws-node",
+          "resources": {
+            "requests": {
+              "cpu": "25m"
+            }
+          }
+        },
+        {
+          "name": "aws-eks-nodeagent",
+          "resources": {
+            "requests": {
+              "cpu": "25m"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "aws-eks-nodeagent",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:32Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "aws-node",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:30Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "kube-system",
+      "pod": "eks-pod-identity-agent-zbx78",
+      "uid": "c525e362-682d-40f9-a462-2e0aa347284a",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "BestEffort",
+      "resources": [
+        {
+          "name": "eks-pod-identity-agent",
+          "resources": {}
+        }
+      ],
+      "status": [
+        {
+          "name": "eks-pod-identity-agent",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:28Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "kube-system",
+      "pod": "kube-proxy-gc2jm",
+      "uid": "39f2e9fd-8fab-4cd0-9efe-41a7fb7aafd9",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-proxy",
+          "resources": {
+            "requests": {
+              "cpu": "100m"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-proxy",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "lab03",
+      "pod": "memory-leak-5469b688d4-wq2r9",
+      "uid": "e2c77e48-cc8d-4a59-b155-ded5c9c49841",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "memory-leak",
+          "resources": {
+            "limits": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "memory-leak",
+          "ready": true,
+          "restartCount": 1,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T22:54:04Z"
+            }
+          },
+          "lastState": {
+            "terminated": {
+              "containerID": "containerd://e002dccc579b2d9cf0c9254f301516c4d709066019a1f7ad66460f0407de35ee",
+              "exitCode": 137,
+              "finishedAt": "2026-09-08T22:54:03Z",
+              "reason": "OOMKilled",
+              "startedAt": "2026-09-08T22:49:32Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-ndzmg",
+      "uid": "f2c1f044-7b93-4f27-b67a-7e4ac5fc41db",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ],
+  "monitoring-before.json": [
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l",
+      "uid": "c4418ce5-fa9f-422d-91a7-3715db519409",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "grafana-sc-dashboard",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "10m",
+              "memory": "32Mi"
+            }
+          }
+        },
+        {
+          "name": "grafana-sc-datasources",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "10m",
+              "memory": "32Mi"
+            }
+          }
+        },
+        {
+          "name": "grafana",
+          "resources": {
+            "limits": {
+              "memory": "512Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "grafana",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:15Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "grafana-sc-dashboard",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:00Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "grafana-sc-datasources",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:01Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp",
+      "uid": "b09d5128-976f-4801-80c5-117f3dea3aa7",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-state-metrics",
+          "resources": {
+            "limits": {
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "50m",
+              "memory": "64Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-state-metrics",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:25:37Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-operator-7fd66ffc65-sjt6v",
+      "uid": "ee78c734-0d2e-4c5e-a825-f5d44b32be30",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-prometheus-stack",
+          "resources": {
+            "limits": {
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-prometheus-stack",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:30:59Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-jn2vl",
+      "uid": "49e61994-29f8-468b-b155-331e7f080297",
+      "node": "system-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:51:35Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-ndzmg",
+      "uid": "f2c1f044-7b93-4f27-b67a-7e4ac5fc41db",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-q9lcz",
+      "uid": "40371e9e-6946-432b-a087-7dc18008a7e9",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:18:49Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-wqm8k",
+      "uid": "0f46ba54-6bdc-4196-98fd-5e716821b8a2",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:17:39Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "prometheus-kube-prometheus-stack-prometheus-0",
+      "uid": "662594e5-2f03-484a-95e0-86e0350ae639",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "prometheus",
+          "resources": {
+            "limits": {
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "250m",
+              "memory": "512Mi"
+            }
+          }
+        },
+        {
+          "name": "config-reloader",
+          "resources": {}
+        }
+      ],
+      "status": [
+        {
+          "name": "config-reloader",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:33:32Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "prometheus",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:33:31Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ],
+  "monitoring-after.json": [
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l",
+      "uid": "c4418ce5-fa9f-422d-91a7-3715db519409",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "grafana-sc-dashboard",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "10m",
+              "memory": "32Mi"
+            }
+          }
+        },
+        {
+          "name": "grafana-sc-datasources",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "10m",
+              "memory": "32Mi"
+            }
+          }
+        },
+        {
+          "name": "grafana",
+          "resources": {
+            "limits": {
+              "memory": "512Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "grafana",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:15Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "grafana-sc-dashboard",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:00Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "grafana-sc-datasources",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:31:01Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp",
+      "uid": "b09d5128-976f-4801-80c5-117f3dea3aa7",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-state-metrics",
+          "resources": {
+            "limits": {
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "50m",
+              "memory": "64Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-state-metrics",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:25:37Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-operator-7fd66ffc65-sjt6v",
+      "uid": "ee78c734-0d2e-4c5e-a825-f5d44b32be30",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "kube-prometheus-stack",
+          "resources": {
+            "limits": {
+              "memory": "256Mi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "kube-prometheus-stack",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:30:59Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-jn2vl",
+      "uid": "49e61994-29f8-468b-b155-331e7f080297",
+      "node": "system-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:51:35Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-ndzmg",
+      "uid": "f2c1f044-7b93-4f27-b67a-7e4ac5fc41db",
+      "node": "canary-node",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T18:56:27Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-q9lcz",
+      "uid": "40371e9e-6946-432b-a087-7dc18008a7e9",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:18:49Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "kube-prometheus-stack-prometheus-node-exporter-wqm8k",
+      "uid": "0f46ba54-6bdc-4196-98fd-5e716821b8a2",
+      "node": "apps-node-a",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "node-exporter",
+          "resources": {
+            "limits": {
+              "memory": "128Mi"
+            },
+            "requests": {
+              "cpu": "25m",
+              "memory": "32Mi"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "name": "node-exporter",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T21:17:39Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    },
+    {
+      "namespace": "monitoring",
+      "pod": "prometheus-kube-prometheus-stack-prometheus-0",
+      "uid": "662594e5-2f03-484a-95e0-86e0350ae639",
+      "node": "apps-node-b",
+      "phase": "Running",
+      "qos": "Burstable",
+      "resources": [
+        {
+          "name": "prometheus",
+          "resources": {
+            "limits": {
+              "memory": "2Gi"
+            },
+            "requests": {
+              "cpu": "250m",
+              "memory": "512Mi"
+            }
+          }
+        },
+        {
+          "name": "config-reloader",
+          "resources": {}
+        }
+      ],
+      "status": [
+        {
+          "name": "config-reloader",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:33:32Z"
+            }
+          },
+          "lastState": {}
+        },
+        {
+          "name": "prometheus",
+          "ready": true,
+          "restartCount": 0,
+          "state": {
+            "running": {
+              "startedAt": "2026-09-08T19:33:31Z"
+            }
+          },
+          "lastState": {}
+        }
+      ]
+    }
+  ]
+}

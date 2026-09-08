@@ -1,0 +1,34 @@
+# Sanitized capture: node, address, instance, host identity, node-group and local-path aliases applied.
+2026-09-08T22:49:32.891271606Z Starting intentional memory leak; limit is 128Mi
+2026-09-08T22:51:32.894123790Z Retained 4 MiB of payload
+2026-09-08T22:51:37.897787635Z Retained 8 MiB of payload
+2026-09-08T22:51:42.900773761Z Retained 12 MiB of payload
+2026-09-08T22:51:47.903631001Z Retained 16 MiB of payload
+2026-09-08T22:51:52.906591651Z Retained 20 MiB of payload
+2026-09-08T22:51:57.909476498Z Retained 24 MiB of payload
+2026-09-08T22:52:02.912829310Z Retained 28 MiB of payload
+2026-09-08T22:52:07.915822317Z Retained 32 MiB of payload
+2026-09-08T22:52:12.919512273Z Retained 36 MiB of payload
+2026-09-08T22:52:17.922511993Z Retained 40 MiB of payload
+2026-09-08T22:52:22.925517292Z Retained 44 MiB of payload
+2026-09-08T22:52:27.928583315Z Retained 48 MiB of payload
+2026-09-08T22:52:32.931533046Z Retained 52 MiB of payload
+2026-09-08T22:52:37.934586986Z Retained 56 MiB of payload
+2026-09-08T22:52:42.937537232Z Retained 60 MiB of payload
+2026-09-08T22:52:47.940617481Z Retained 64 MiB of payload
+2026-09-08T22:52:52.943592382Z Retained 68 MiB of payload
+2026-09-08T22:52:57.946588027Z Retained 72 MiB of payload
+2026-09-08T22:53:02.949899839Z Retained 76 MiB of payload
+2026-09-08T22:53:07.953142914Z Retained 80 MiB of payload
+2026-09-08T22:53:12.956447263Z Retained 84 MiB of payload
+2026-09-08T22:53:17.959554112Z Retained 88 MiB of payload
+2026-09-08T22:53:22.962582933Z Retained 92 MiB of payload
+2026-09-08T22:53:27.965512761Z Retained 96 MiB of payload
+2026-09-08T22:53:32.968435225Z Retained 100 MiB of payload
+2026-09-08T22:53:37.971304415Z Retained 104 MiB of payload
+2026-09-08T22:53:42.974353960Z Retained 108 MiB of payload
+2026-09-08T22:53:47.977188989Z Retained 112 MiB of payload
+2026-09-08T22:53:52.980757357Z Retained 116 MiB of payload
+2026-09-08T22:53:57.983876173Z Retained 120 MiB of payload
+
+previous_logs_exit_code=0
