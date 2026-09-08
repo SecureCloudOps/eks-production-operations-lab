@@ -1,0 +1,26 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+2026-09-08T22:07:57Z
+RUN_DIR=<private-run-directory>
+eks-operations-lab
+---------------------------------------------
+|              DescribeCluster              |
++---------------------+---------+-----------+
+|        name         | status  |  version  |
++---------------------+---------+-----------+
+|  eks-operations-lab |  ACTIVE |  1.36     |
++---------------------+---------+-----------+
+NAME                          STATUS   ROLES    AGE     VERSION               WORKLOAD          NODEGROUP
+apps-node-a   Ready    <none>   50m     v1.36.1-eks-a3a0722   production-apps   apps-nodegroup
+system-node   Ready    <none>   136m    v1.36.1-eks-a3a0722   system            system-nodegroup
+apps-node-b   Ready    <none>   169m    v1.36.1-eks-a3a0722   production-apps   apps-nodegroup
+canary-node     Ready    <none>   3h11m   v1.36.1-eks-a3a0722   canary            canary-nodegroup
+apps-node-a	production-apps	unschedulable=false	taints=[]
+system-node	system	unschedulable=false	taints=[{"effect":"NoSchedule","key":"critical-addons","value":"true"}]
+apps-node-b	production-apps	unschedulable=false	taints=[]
+canary-node	canary	unschedulable=false	taints=[{"effect":"NoSchedule","key":"workload","value":"canary"}]
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/http-demo   2/2     2            2           6h42m
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/http-demo   1               N/A               1                     6h42m
+No resources found

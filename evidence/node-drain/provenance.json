@@ -1,0 +1,53 @@
+{
+  "run": "lab02-20260908T220757Z",
+  "source": "Operator-executed commands captured locally; cloud actions were not executed by the assistant.",
+  "transformations": [
+    "Node names replaced with role aliases consistent within Lab 2 only",
+    "Private IPv4 addresses replaced with stable aliases",
+    "Generated node-group suffixes removed",
+    "Absolute run-directory path removed",
+    "Sanitization header added; remaining text preserved"
+  ],
+  "files": {
+    "preflight.txt": {
+      "raw_sha256": "22d53bcffaf1ac139bb3b7790e8952db06f2a20be2ad619dd254ff528ef2a3c9",
+      "sanitized_sha256": "ac9c42123007e96e0087071f0fed43cd5222fb1064fa5ad5849f6e4ab776e254"
+    },
+    "baseline.txt": {
+      "raw_sha256": "42cee57eae64c9bc3e1b1471c5cef68a20b5917dec910462eb9d536d050ffd57",
+      "sanitized_sha256": "312aa41b56366c498b6e0982b10fd3f9f6d291df321cb8cfcffc77674f8d042b"
+    },
+    "deploy.txt": {
+      "raw_sha256": "ac451c6b49b4471a61de82f4fbf26af098a6ef34118e73de30c35628b0f9f6ca",
+      "sanitized_sha256": "75d48b1d71aa9f22b93970fb0130d42a8bf7be302861b707eed9b691d7a39969"
+    },
+    "node-pods-before.txt": {
+      "raw_sha256": "e424c87df15cc140cc6b326e682c31541c52f760ac642523dacfb07d26dc8583",
+      "sanitized_sha256": "d19641dffb201a5218c3c3c04dc9b358de30decac452552331a3b0f5f6f47401"
+    },
+    "diagnosis.txt": {
+      "raw_sha256": "de6b5eefdef374dc68ca1766596258b8e164cbe7136aaaae144eb20f5d4fe738",
+      "sanitized_sha256": "7a7f54b8bbaa671fc086344b26cbd2dc1eb8fb4151af18b26828a94448645e9f"
+    },
+    "drain-blocked.txt": {
+      "raw_sha256": "221121857465c2333144e6458bc7e4257c579fb303a002f793e9e940d47b3bdf",
+      "sanitized_sha256": "5f15fa6ea397b8c767217022918ac193b37c51ea817940354e9d5b2ea765a636"
+    },
+    "drain-retry.txt": {
+      "raw_sha256": "db6b14041467b480e9590df5b73d2391dceddbd9705e536b67612a4d0a890af2",
+      "sanitized_sha256": "f8430620a3117bb6ed4a1b83b1b1cd6164abbc9c42dabd1cd0d2c09cd7d5b312"
+    },
+    "scale-remediation.txt": {
+      "raw_sha256": "a17b1681180d5b695d3b147d7f2f97d80f4ccb388852da473acd34e4bce0b34c",
+      "sanitized_sha256": "f3fb1453cb772a8bf0d25990503b41cdd55714fd06fa28b551059f0282a4aa31"
+    },
+    "recovery.txt": {
+      "raw_sha256": "b04018d144f8f9c6b4676c89fa03e2a368d5196e07d6ee9b5122507cc8c85fae",
+      "sanitized_sha256": "c79e0a205057675f7a224a5fea07ec32ff61e4b09ee9b70bd59fe2032526d4a1"
+    },
+    "cleanup.txt": {
+      "raw_sha256": "8a0546bcaa5d21951cf93325a84e960a91095c45d48e6763a4079b28130c42a4",
+      "sanitized_sha256": "9ae6bdf4721d9dabe12e96317fb7c7af30891d339d4797bd6ccc4ea379cbadf9"
+    }
+  }
+}

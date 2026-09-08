@@ -1,0 +1,9 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+2026-09-08T22:08:48Z
+Selected node: apps-node-a
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+drain-demo   1/1     1            1           10s
+NAME                       READY   STATUS    RESTARTS   AGE   IP           NODE                          NOMINATED NODE   READINESS GATES
+drain-demo-76cc976-ln9sh   1/1     Running   0          10s   private-ip-03   apps-node-a   <none>           <none>
+NAME         MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+drain-demo   1               N/A               0                     10s

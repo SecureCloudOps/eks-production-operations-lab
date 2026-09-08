@@ -1,0 +1,17 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+2026-09-08T22:15:05Z
+node/apps-node-a uncordoned
+true
+namespace "lab02" deleted
+deployment.apps "drain-demo" deleted from lab02 namespace
+poddisruptionbudget.policy "drain-demo" deleted from lab02 namespace
+NAME                          STATUS   ROLES    AGE     VERSION
+apps-node-a   Ready    <none>   57m     v1.36.1-eks-a3a0722
+system-node   Ready    <none>   143m    v1.36.1-eks-a3a0722
+apps-node-b   Ready    <none>   176m    v1.36.1-eks-a3a0722
+canary-node     Ready    <none>   3h18m   v1.36.1-eks-a3a0722
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/http-demo   2/2     2            2           6h49m
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/http-demo   1               N/A               1                     6h49m

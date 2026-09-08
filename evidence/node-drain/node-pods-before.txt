@@ -1,0 +1,11 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+NAMESPACE     NAME                                                   READY   STATUS    RESTARTS   AGE   IP            NODE                          NOMINATED NODE   READINESS GATES
+default       http-demo-6d655b5f68-9r4dz                             1/1     Running   0          37m   private-ip-04    apps-node-a   <none>           1/1
+kube-system   aws-load-balancer-controller-5698d6c4b8-rc68v          1/1     Running   0          37m   private-ip-06    apps-node-a   <none>           <none>
+kube-system   aws-node-rfch4                                         2/2     Running   0          51m   private-ip-01   apps-node-a   <none>           <none>
+kube-system   eks-pod-identity-agent-lb767                           1/1     Running   0          51m   private-ip-01   apps-node-a   <none>           <none>
+kube-system   kube-proxy-gl6w2                                       1/1     Running   0          51m   private-ip-01   apps-node-a   <none>           <none>
+lab02         drain-demo-76cc976-ln9sh                               1/1     Running   0          8s    private-ip-03    apps-node-a   <none>           <none>
+monitoring    kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l         3/3     Running   0          37m   private-ip-05    apps-node-a   <none>           <none>
+monitoring    kube-prometheus-stack-operator-7fd66ffc65-sjt6v        1/1     Running   0          37m   private-ip-02   apps-node-a   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-wqm8k   1/1     Running   0          51m   private-ip-01   apps-node-a   <none>           <none>

@@ -1,0 +1,6 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+namespace/lab02 created
+deployment.apps/drain-demo created
+poddisruptionbudget.policy/drain-demo created
+Waiting for deployment "drain-demo" rollout to finish: 0 of 1 updated replicas are available...
+deployment "drain-demo" successfully rolled out

@@ -1,0 +1,34 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+node/apps-node-a cordoned
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod lab02/drain-demo-76cc976-ln9sh
+There are pending pods in node "apps-node-a" when an error occurred: error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02": global timeout reached: 1m0s
+pod/drain-demo-76cc976-ln9sh
+error: unable to drain node "apps-node-a" due to error: error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02": global timeout reached: 1m0s, continuing command...
+There are pending nodes to be drained:
+ apps-node-a
+error when evicting pods/"drain-demo-76cc976-ln9sh" -n "lab02": global timeout reached: 1m0s
+exit_code=1

@@ -1,0 +1,6 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+node/apps-node-a already cordoned
+evicting pod lab02/drain-demo-76cc976-ln9sh
+pod/drain-demo-76cc976-ln9sh evicted
+node/apps-node-a drained
+exit_code=0

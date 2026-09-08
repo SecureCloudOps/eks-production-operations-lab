@@ -1,0 +1,20 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+2026-09-08T22:12:10Z
+NAME         MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+drain-demo   1               N/A               0                     3m33s
+Name:           drain-demo
+Namespace:      lab02
+Min available:  1
+Selector:       app=drain-demo
+Status:
+    Allowed disruptions:  0
+    Current:              1
+    Desired:              1
+    Total:                1
+Events:                   <none>
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+drain-demo   1/1     1            1           3m35s
+NAME                       READY   STATUS    RESTARTS   AGE     IP           NODE                          NOMINATED NODE   READINESS GATES   LABELS
+drain-demo-76cc976-ln9sh   1/1     Running   0          3m34s   private-ip-03   apps-node-a   <none>           <none>            app=drain-demo,pod-template-hash=76cc976,topology.kubernetes.io/region=us-east-1,topology.kubernetes.io/zone=us-east-1a
+NAME                          STATUS                     ROLES    AGE   VERSION
+apps-node-a   Ready,SchedulingDisabled   <none>   54m   v1.36.1-eks-a3a0722

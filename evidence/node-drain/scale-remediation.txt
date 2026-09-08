@@ -1,0 +1,12 @@
+# Sanitized local capture; node, IP, node-group and local-path aliases applied.
+2026-09-08T22:12:35Z
+deployment.apps/drain-demo scaled
+Waiting for deployment "drain-demo" rollout to finish: 1 of 2 updated replicas are available...
+deployment "drain-demo" successfully rolled out
+NAME                       READY   STATUS    RESTARTS   AGE    IP            NODE                          NOMINATED NODE   READINESS GATES
+drain-demo-76cc976-ln9sh   1/1     Running   0          4m4s   private-ip-03    apps-node-a   <none>           <none>
+drain-demo-76cc976-v4svv   1/1     Running   0          7s     private-ip-07   apps-node-b   <none>           <none>
+NAME         MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+drain-demo   1               N/A               1                     4m4s
+NAME                          STATUS                     ROLES    AGE   VERSION
+apps-node-a   Ready,SchedulingDisabled   <none>   55m   v1.36.1-eks-a3a0722
