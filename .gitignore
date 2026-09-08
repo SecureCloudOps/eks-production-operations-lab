@@ -1,0 +1,63 @@
+# Terraform working directories, local state (including recovery/backup files).
+.terraform/
+*.tfstate*
+terraform.tfstate.d/
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+
+# Saved plans can contain credentials and unredacted values. Use these names.
+*.tfplan*
+*.plan
+*.plan.json
+tfplan
+tfplan.*
+plan.out
+destroy.plan*
+
+# Real inputs and local overrides; only sanitized templates belong in Git.
+*.tfvars*
+!*.tfvars.example
+!*.tfvars.sample
+!*.tfvars.json.example
+!*.tfvars.json.sample
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Credentials and machine-local access configuration.
+.env
+.env.*
+!.env.example
+.aws/
+.kube/
+.ssh/
+credentials
+credentials.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+
+# Put raw evidence, exports, arbitrary-named plans and backups here.
+.local/
+.cache/
+tmp/
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+.venv/
+
+# Provider selections and checksums are source-controlled, never state locks.
+!.terraform.lock.hcl

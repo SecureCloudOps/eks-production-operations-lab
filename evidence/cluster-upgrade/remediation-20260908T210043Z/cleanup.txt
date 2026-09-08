@@ -1,0 +1,37 @@
+{
+  "apps": {
+    "version": "1.36",
+    "status": "ACTIVE",
+    "scalingConfig": {
+      "minSize": 2,
+      "maxSize": 2,
+      "desiredSize": 2
+    },
+    "health": {
+      "issues": []
+    }
+  },
+  "matchingLoadBalancersAfterCleanup": 0,
+  "terraformFinalPlan": "No changes (verified from saved plan output)"
+}
+
+probe exit code: 0
+metrics exit code: 0
+observer exit code: 0
+
+ingress.networking.k8s.io "lab01-http-demo" deleted from default namespace
+
+2026-09-08T21:53:09Z
+NAME                          STATUS   ROLES    AGE    VERSION
+node-3   Ready    <none>   35m    v1.36.1-eks-a3a0722
+node-4   Ready    <none>   121m   v1.36.1-eks-a3a0722
+node-1   Ready    <none>   154m   v1.36.1-eks-a3a0722
+node-5     Ready    <none>   176m   v1.36.1-eks-a3a0722
+deployment "http-demo" successfully rolled out
+deployment "aws-load-balancer-controller" successfully rolled out
+statefulset rolling update complete 1 pods at revision prometheus-kube-prometheus-stack-prometheus-68f756bdbc...
+NAME                         READY   STATUS    RESTARTS   AGE   IP            NODE                          NOMINATED NODE   READINESS GATES
+http-demo-6d655b5f68-42mjt   1/1     Running   0          43m   ip-1   node-1   <none>           1/1
+http-demo-6d655b5f68-9r4dz   1/1     Running   0          22m   ip-3    node-3   <none>           1/1
+NAME        MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+http-demo   1               N/A               1                     6h27m

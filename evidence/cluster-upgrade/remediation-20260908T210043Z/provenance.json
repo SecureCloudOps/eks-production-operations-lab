@@ -1,0 +1,26 @@
+{
+  "sourceRun": "20260908T210043Z",
+  "rawSourceSha256": {
+    "workload-health.txt": "117ef3d1b6f0d1e5719f04932ea1d8030abf4b59deedb4ad1d89e0d005faea5b",
+    "prometheus-results.txt": "d6ea07a42556423396c48eb867c270d9bae8c8de7605b3eed55db91a0de16e56",
+    "observations.jsonl": "d652a7c6e9ef1b1a831e17ab8b2d3830fa0054bb23d95bf233de400deb51db7f",
+    "apps-capacity-restored.json": "a0588b9d79d10bb459cc90de3a4120c176b12f3d9efad480345011ce8e8d9aee",
+    "ingress-before-cleanup.json": "304b845e15cd3c94d8d0f06273b39f01e85e129fff07332e51952973cd1a9b0b",
+    "load-balancers-after-cleanup.json": "90428e0d68bcb8075f442e1abb7cd4ab64a35e3cd960fc2471452668a2e68ac8",
+    "final-terraform-plan.txt": "6d2ce6c5bf7a24bc4fab552a8e144d1b8b10fa9b7556f362b80811d02297f71b",
+    "collector-exit-codes.txt": "bd4cf694c5ce66b1b3dd461b8a2c6cb075d606621c9472322dec7c88e303ed9d",
+    "ingress-cleanup.txt": "cfc1fcc947ab0694729ed68b0e77bef49287e066bc2e7db6787ff55ad5a25d5b",
+    "final-workload-health.txt": "c3cda841e456b612eaa947a3ce6dd51ea6b454df0c3f9d1309e097012a4fcf57",
+    "timeline.txt": "c09b9d82d89ffb4fb2f4d821186bf1769a772c7fba1e22014972d63d20984578",
+    "drain.txt": "102128cb008c00589b9a63e81fd6e6f3f7319449af41c850830f16723414d4b5"
+  },
+  "transformation": "HTTP/Prometheus preserved; observations retain every record but select pod/PDB/target fields; cleanup is selected evidence. Infrastructure aliases are consistent within this package. Raw sources remain local.",
+  "publishedSha256": {
+    "cleanup.txt": "24841963d2e61610b7c48a66429a886ed7b3f59ce87ab96fa0203e56665891d1",
+    "drain.txt": "1d3c6fc64d33daee91e7fd3fbb895cec8edfc3f36b1faf8104f22f6e989bd195",
+    "observations.jsonl": "c03c57bc1f31ea7fd35d23e4245f801fa90a02a56ba87a138e0a09249ea45694",
+    "prometheus-results.jsonl": "d6ea07a42556423396c48eb867c270d9bae8c8de7605b3eed55db91a0de16e56",
+    "summary.md": "5ade00def7092e502d6861a123a5678461edbe8890d7ad73e78f846ae8fef4e6",
+    "workload-health.txt": "117ef3d1b6f0d1e5719f04932ea1d8030abf4b59deedb4ad1d89e0d005faea5b"
+  }
+}

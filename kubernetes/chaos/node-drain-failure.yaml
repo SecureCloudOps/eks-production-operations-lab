@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lab02
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drain-demo
+  namespace: lab02
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drain-demo
+  template:
+    metadata:
+      labels:
+        app: drain-demo
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.28.0-alpine
+          ports:
+            - name: http
+              containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 2
+            periodSeconds: 5
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: drain-demo
+  namespace: lab02
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: drain-demo

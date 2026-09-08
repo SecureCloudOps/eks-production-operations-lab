@@ -1,0 +1,2 @@
+NAME              CLASS   HOSTS   ADDRESS                                                                  PORTS   AGE
+lab01-http-demo   alb     *       <ALB-01>   80      6m20s

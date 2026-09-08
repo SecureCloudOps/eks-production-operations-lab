@@ -1,0 +1,10 @@
+# Opt-in for eligible newly created pods with an IP TargetGroupBinding.
+# Create the HTTP Ingress and wait for its TargetGroupBinding before recreating pods.
+# Existing pods are not mutated by applying this label.
+# Cleanup: remove only the label if needed; never delete this shared namespace.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: default
+  labels:
+    elbv2.k8s.aws/pod-readiness-gate-inject: enabled

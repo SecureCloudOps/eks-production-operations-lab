@@ -1,0 +1,39 @@
+# Labs 04/05 use HTTP ALB and NLB IP targets only.
+replicaCount: 2
+serviceAccount:
+  create: true
+  name: aws-load-balancer-controller
+  # EKS Pod Identity association supplies credentials; no IRSA annotation.
+nodeSelector:
+  workload: production-apps
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    memory: 256Mi
+securityContext:
+  runAsNonRoot: true
+  readOnlyRootFilesystem: true
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop: [ALL]
+ingressClass: alb
+createIngressClassResource: true
+ingressClassParams:
+  create: false
+ingressClassConfig:
+  default: false
+defaultTargetType: ip
+# Lab 04 explicitly sets loadBalancerClass; leave unrelated Services alone.
+enableServiceMutatorWebhook: false
+enableCertManager: false
+enableShield: false
+enableWaf: false
+enableWafv2: false
+# These optional controllers are outside the ALB Ingress / NLB Service labs.
+controllerConfig:
+  featureGates:
+    AGAController: false
+    ALBGatewayAPI: false
+    NLBGatewayAPI: false

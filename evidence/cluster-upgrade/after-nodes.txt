@@ -1,0 +1,117 @@
+# Lab 01 after node inventory
+# Sanitized projection of saved Kubernetes and EC2 describe responses.
+# AMI is EC2 launch ImageId; OS version is the Kubernetes node observation.
+# Node/instance aliases are consistent across every published file.
+{
+  "ami": "ami-07ecc2f05e58aae70",
+  "availabilityZone": "us-east-1b",
+  "ec2State": "running",
+  "group": "apps",
+  "instance": "instance-apps-after-1",
+  "instanceType": "m6i.large",
+  "kubelet": "v1.36.1-eks-a3a0722",
+  "launchTime": "2026-09-08T19:17:28+00:00",
+  "node": "apps-after-1",
+  "os": "Bottlerocket OS 1.64.0 (aws-k8s-1.36)",
+  "ready": "True"
+}
+{
+  "ami": "ami-07ecc2f05e58aae70",
+  "availabilityZone": "us-east-1c",
+  "ec2State": "running",
+  "group": "apps",
+  "instance": "instance-apps-after-2",
+  "instanceType": "m6i.large",
+  "kubelet": "v1.36.1-eks-a3a0722",
+  "launchTime": "2026-09-08T19:18:32+00:00",
+  "node": "apps-after-2",
+  "os": "Bottlerocket OS 1.64.0 (aws-k8s-1.36)",
+  "ready": "True"
+}
+{
+  "ami": "ami-07ecc2f05e58aae70",
+  "availabilityZone": "us-east-1a",
+  "ec2State": "running",
+  "group": "canary",
+  "instance": "instance-canary-after-1",
+  "instanceType": "t3.small",
+  "kubelet": "v1.36.1-eks-a3a0722",
+  "launchTime": "2026-09-08T18:56:06+00:00",
+  "node": "canary-after-1",
+  "os": "Bottlerocket OS 1.64.0 (aws-k8s-1.36)",
+  "ready": "True"
+}
+{
+  "ami": "ami-07ecc2f05e58aae70",
+  "availabilityZone": "us-east-1b",
+  "ec2State": "running",
+  "group": "system",
+  "instance": "instance-system-after-1",
+  "instanceType": "t3.small",
+  "kubelet": "v1.36.1-eks-a3a0722",
+  "launchTime": "2026-09-08T19:51:10+00:00",
+  "node": "system-after-1",
+  "os": "Bottlerocket OS 1.64.0 (aws-k8s-1.36)",
+  "ready": "True"
+}
+# Managed-group version, configuration and health
+{
+  "amiType": "BOTTLEROCKET_x86_64",
+  "capacityType": "ON_DEMAND",
+  "health": {
+    "issues": []
+  },
+  "nodegroupName": "apps",
+  "releaseVersion": "1.64.0-ad9d4847",
+  "scalingConfig": {
+    "desiredSize": 2,
+    "maxSize": 2,
+    "minSize": 2
+  },
+  "status": "ACTIVE",
+  "updateConfig": {
+    "maxUnavailable": 1,
+    "updateStrategy": "DEFAULT"
+  },
+  "version": "1.36"
+}
+{
+  "amiType": "BOTTLEROCKET_x86_64",
+  "capacityType": "ON_DEMAND",
+  "health": {
+    "issues": []
+  },
+  "nodegroupName": "canary",
+  "releaseVersion": "1.64.0-ad9d4847",
+  "scalingConfig": {
+    "desiredSize": 1,
+    "maxSize": 1,
+    "minSize": 1
+  },
+  "status": "ACTIVE",
+  "updateConfig": {
+    "maxUnavailable": 1,
+    "updateStrategy": "DEFAULT"
+  },
+  "version": "1.36"
+}
+{
+  "amiType": "BOTTLEROCKET_x86_64",
+  "capacityType": "ON_DEMAND",
+  "health": {
+    "issues": []
+  },
+  "nodegroupName": "system",
+  "releaseVersion": "1.64.0-ad9d4847",
+  "scalingConfig": {
+    "desiredSize": 1,
+    "maxSize": 1,
+    "minSize": 1
+  },
+  "status": "ACTIVE",
+  "updateConfig": {
+    "maxUnavailable": 1,
+    "updateStrategy": "DEFAULT"
+  },
+  "version": "1.36"
+}

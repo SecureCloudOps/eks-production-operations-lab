@@ -1,0 +1,41 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.3
+      - name: Terraform format
+        run: terraform fmt -check -recursive
+      - name: Initialize validation dependencies
+        run: terraform -chdir=terraform init -backend=false -input=false -lockfile=readonly
+      - name: Terraform validate
+        run: terraform -chdir=terraform validate -no-color
+      - name: Parse YAML
+        run: |
+          ruby -e 'require "yaml"; Dir.glob(["kubernetes/**/*.{yaml,yml}", "terraform/*.{yaml,yml}", ".github/workflows/*.{yaml,yml}"]).each { |f| YAML.parse_stream(File.read(f)); puts "Parsed #{f}" }'
+      - name: Install kubeconform
+        env:
+          KUBECONFORM_VERSION: v0.6.7
+        run: |
+          mkdir -p "$RUNNER_TEMP/kubeconform"
+          curl --fail --silent --show-error --location \
+            "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
+            -o "$RUNNER_TEMP/kubeconform.tar.gz"
+          tar -xzf "$RUNNER_TEMP/kubeconform.tar.gz" -C "$RUNNER_TEMP/kubeconform" kubeconform
+          echo "$RUNNER_TEMP/kubeconform" >> "$GITHUB_PATH"
+      - name: Kubernetes schemas
+        run: kubeconform -strict -summary -kubernetes-version 1.35.0 kubernetes/
+      - name: Shell syntax
+        run: find scripts -type f -name '*.sh' -exec bash -n {} +

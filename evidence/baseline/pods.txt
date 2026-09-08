@@ -1,0 +1,27 @@
+NAMESPACE     NAME                                                        READY   STATUS    RESTARTS   AGE     IP            NODE                          NOMINATED NODE   READINESS GATES
+default       http-demo-75ccdcd48f-h8cqp                                  1/1     Running   0          6m53s   <IP-11>     <NODE-01>    <none>           <none>
+default       http-demo-75ccdcd48f-mz88h                                  1/1     Running   0          6m53s   <IP-12>     <NODE-04>    <none>           <none>
+kube-system   aws-load-balancer-controller-5698d6c4b8-dfn5c               1/1     Running   0          12m     <IP-14>     <NODE-04>    <none>           <none>
+kube-system   aws-load-balancer-controller-5698d6c4b8-s2cdc               1/1     Running   0          12m     <IP-10>    <NODE-01>    <none>           <none>
+kube-system   aws-node-9tgh2                                              2/2     Running   0          53m     <IP-04>    <NODE-01>    <none>           <none>
+kube-system   aws-node-b7n6t                                              2/2     Running   0          53m     <IP-13>    <NODE-04>    <none>           <none>
+kube-system   aws-node-qd46x                                              2/2     Running   0          53m     <IP-07>   <NODE-03>   <none>           <none>
+kube-system   aws-node-t4cm2                                              2/2     Running   0          53m     <IP-05>    <NODE-02>    <none>           <none>
+kube-system   coredns-9f58dc946-h2xtv                                     1/1     Running   0          52m     <IP-09>   <NODE-03>   <none>           <none>
+kube-system   coredns-9f58dc946-nxwm4                                     1/1     Running   0          52m     <IP-03>   <NODE-03>   <none>           <none>
+kube-system   eks-pod-identity-agent-6zsqw                                1/1     Running   0          53m     <IP-04>    <NODE-01>    <none>           <none>
+kube-system   eks-pod-identity-agent-bmk6c                                1/1     Running   0          53m     <IP-13>    <NODE-04>    <none>           <none>
+kube-system   eks-pod-identity-agent-lvjf5                                1/1     Running   0          53m     <IP-05>    <NODE-02>    <none>           <none>
+kube-system   eks-pod-identity-agent-mfjkk                                1/1     Running   0          53m     <IP-07>   <NODE-03>   <none>           <none>
+kube-system   kube-proxy-58hcl                                            1/1     Running   0          52m     <IP-04>    <NODE-01>    <none>           <none>
+kube-system   kube-proxy-6fjd4                                            1/1     Running   0          52m     <IP-13>    <NODE-04>    <none>           <none>
+kube-system   kube-proxy-9wmzl                                            1/1     Running   0          52m     <IP-05>    <NODE-02>    <none>           <none>
+kube-system   kube-proxy-jm8ms                                            1/1     Running   0          52m     <IP-07>   <NODE-03>   <none>           <none>
+monitoring    kube-prometheus-stack-grafana-5cd4986778-4ltrq              3/3     Running   0          12m     <IP-08>    <NODE-01>    <none>           <none>
+monitoring    kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm   1/1     Running   0          12m     <IP-06>   <NODE-01>    <none>           <none>
+monitoring    kube-prometheus-stack-operator-7fd66ffc65-tb8wn             1/1     Running   0          12m     <IP-02>    <NODE-04>    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-8s4dn        1/1     Running   0          12m     <IP-04>    <NODE-01>    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-d8jw2        1/1     Running   0          12m     <IP-05>    <NODE-02>    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-kjqsn        1/1     Running   0          12m     <IP-07>   <NODE-03>   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-v7sr8        1/1     Running   0          12m     <IP-13>    <NODE-04>    <none>           <none>
+monitoring    prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          12m     <IP-01>   <NODE-04>    <none>           <none>

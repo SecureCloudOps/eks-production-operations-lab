@@ -1,0 +1,5 @@
+NAME                          STATUS   ROLES    AGE   VERSION               INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                                KERNEL-VERSION   CONTAINER-RUNTIME
+<NODE-01>    Ready    <none>   53m   v1.35.5-eks-a3a0722   <IP-04>    <none>        Bottlerocket OS 1.64.0 (aws-k8s-1.35)   6.12.94          containerd://2.2.5+bottlerocket
+<NODE-02>    Ready    <none>   53m   v1.35.5-eks-a3a0722   <IP-05>    <none>        Bottlerocket OS 1.64.0 (aws-k8s-1.35)   6.12.94          containerd://2.2.5+bottlerocket
+<NODE-03>   Ready    <none>   53m   v1.35.5-eks-a3a0722   <IP-07>   <none>        Bottlerocket OS 1.64.0 (aws-k8s-1.35)   6.12.94          containerd://2.2.5+bottlerocket
+<NODE-04>    Ready    <none>   53m   v1.35.5-eks-a3a0722   <IP-13>    <none>        Bottlerocket OS 1.64.0 (aws-k8s-1.35)   6.12.94          containerd://2.2.5+bottlerocket

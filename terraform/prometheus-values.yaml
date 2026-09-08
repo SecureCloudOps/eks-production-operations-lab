@@ -1,0 +1,101 @@
+# Lab defaults: internal services, no ingress, and no PVC/CSI prerequisite.
+# Metrics and UI-only Grafana changes are lost on pod
+# replacement. Configure durable storage before relying on historical data.
+# Keep monitoring off the small system node(s) and the isolated canary node.
+
+# EKS does not expose these managed control-plane component metrics.
+kubeEtcd:
+  enabled: false
+kubeControllerManager:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeProxy:
+  enabled: false
+defaultRules:
+  rules:
+    etcd: false
+    kubeControllerManager: false
+    kubeSchedulerAlerting: false
+    kubeSchedulerRecording: false
+    kubeProxy: false
+
+prometheusOperator:
+  nodeSelector: &monitoringNodes
+    workload: production-apps
+  resources:
+    requests: {cpu: 100m, memory: 128Mi}
+    limits: {memory: 256Mi}
+  admissionWebhooks:
+    deployment:
+      nodeSelector: *monitoringNodes
+    patch:
+      nodeSelector: *monitoringNodes
+
+prometheus:
+  service:
+    type: ClusterIP
+  prometheusSpec:
+    replicas: 1
+    nodeSelector: *monitoringNodes
+    retention: 2d
+    retentionSize: 4GB
+    resources:
+      requests: {cpu: 250m, memory: 512Mi}
+      limits: {memory: 2Gi}
+    storageSpec:
+      emptyDir:
+        sizeLimit: 6Gi
+
+# None of the five labs uses alert delivery; Prometheus rules still evaluate.
+alertmanager:
+  enabled: false
+
+grafana:
+  enabled: true
+  nodeSelector: *monitoringNodes
+  service:
+    type: ClusterIP
+  ingress:
+    enabled: false
+  persistence:
+    enabled: false
+  # Chart generates an admin password Secret; no password is embedded here.
+  resources:
+    requests: {cpu: 100m, memory: 128Mi}
+    limits: {memory: 512Mi}
+  sidecar:
+    resources:
+      requests: {cpu: 10m, memory: 32Mi}
+      limits: {memory: 128Mi}
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      labelValue: "1"
+      searchNamespace: monitoring
+      resource: configmap
+      folder: /tmp/dashboards
+      folderAnnotation: grafana_folder
+      provider:
+        foldersFromFilesStructure: true
+      # FUTURE: create ConfigMaps in monitoring with grafana_dashboard: "1".
+      # Put dashboard JSON under data (e.g. reliability.json); optionally use
+      # grafana_folder: /tmp/dashboards/Reliability as a ConfigMap annotation.
+      # Additional dashboard-sidecar settings belong in this block.
+
+kube-state-metrics:
+  nodeSelector: *monitoringNodes
+  resources:
+    requests: {cpu: 50m, memory: 64Mi}
+    limits: {memory: 256Mi}
+
+prometheus-node-exporter:
+  # Collect every Linux node, including tainted system and canary groups.
+  tolerations:
+    - operator: Exists
+      effect: NoSchedule
+    - operator: Exists
+      effect: NoExecute
+  resources:
+    requests: {cpu: 25m, memory: 32Mi}
+    limits: {memory: 128Mi}

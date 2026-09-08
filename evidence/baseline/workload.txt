@@ -1,0 +1,13 @@
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                                      SELECTOR
+deployment.apps/http-demo   2/2     2            2           6m54s   http         nginxinc/nginx-unprivileged:1.28.0-alpine   app=http-demo
+
+NAME                             READY   STATUS    RESTARTS   AGE     IP          NODE                         NOMINATED NODE   READINESS GATES
+pod/http-demo-75ccdcd48f-h8cqp   1/1     Running   0          6m54s   <IP-11>   <NODE-01>   <none>           <none>
+pod/http-demo-75ccdcd48f-mz88h   1/1     Running   0          6m54s   <IP-12>   <NODE-04>   <none>           <none>
+
+NAME                 TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE     SELECTOR
+service/http-demo    ClusterIP   <IP-16>   <none>        80/TCP    6m54s   app=http-demo
+service/kubernetes   ClusterIP   <IP-15>       <none>        443/TCP   58m     <none>
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/http-demo   1               N/A               1                     6m54s

@@ -1,0 +1,290 @@
+NAMESPACE     LAST SEEN   TYPE      REASON                    OBJECT                                                           MESSAGE
+default       52m         Normal    Starting                  node/<NODE-02>
+default       52m         Normal    Starting                  node/<NODE-01>
+default       52m         Normal    Starting                  node/<NODE-04>
+default       52m         Normal    Starting                  node/<NODE-03>
+kube-system   58m         Normal    LeaderElection            lease/cloud-controller-manager                                   <CONTROL-PLANE-01>_fd6e2e21-0c91-4c2a-9e33-c816940bfaff became leader
+kube-system   58m         Normal    LeaderElection            lease/eks-certificates-controller                                <NODE-05> became leader
+kube-system   58m         Normal    LeaderElection            lease/kube-controller-manager                                    <CONTROL-PLANE-01>_15f22cff-6ac4-47b9-89a7-62fb85f2505c became leader
+kube-system   58m         Normal    LeaderElection            lease/cp-vpc-resource-controller                                 <CONTROL-PLANE-01>_6902c328-84e7-4043-9863-cd3602cf9cf9 became leader
+kube-system   58m         Normal    LeaderElection            lease/eks-coredns-autoscaler                                     <CONTROL-PLANE-01>_a918d088-7654-487f-a522-2d104225e4cf became leader
+kube-system   58m         Normal    LeaderElection            lease/kube-scheduler                                             <CONTROL-PLANE-01>_8ac61ac0-de59-4fbd-a350-d06e446cd2df became leader
+kube-system   54m         Normal    LeaderElection            lease/amazon-network-policy-controller-k8s                       <CONTROL-PLANE-01>_56936209-99fa-4121-9972-929bca555d05 became leader
+default       53m         Normal    Starting                  node/<NODE-03>                                 Starting kubelet.
+default       53m         Warning   InvalidDiskCapacity       node/<NODE-03>                                 invalid capacity 0 on image filesystem
+default       53m         Normal    Starting                  node/<NODE-01>                                  Starting kubelet.
+default       53m         Warning   InvalidDiskCapacity       node/<NODE-01>                                  invalid capacity 0 on image filesystem
+default       53m         Normal    NodeHasSufficientMemory   node/<NODE-01>                                  Node <NODE-01> status is now: NodeHasSufficientMemory
+default       53m         Normal    NodeHasSufficientMemory   node/<NODE-03>                                 Node <NODE-03> status is now: NodeHasSufficientMemory
+default       53m         Normal    NodeHasSufficientPID      node/<NODE-01>                                  Node <NODE-01> status is now: NodeHasSufficientPID
+default       53m         Normal    NodeAllocatableEnforced   node/<NODE-01>                                  Updated Node Allocatable limit across pods
+default       53m         Normal    NodeHasNoDiskPressure     node/<NODE-01>                                  Node <NODE-01> status is now: NodeHasNoDiskPressure
+default       53m         Warning   InvalidDiskCapacity       node/<NODE-04>                                  invalid capacity 0 on image filesystem
+default       53m         Normal    Starting                  node/<NODE-04>                                  Starting kubelet.
+default       53m         Normal    NodeAllocatableEnforced   node/<NODE-03>                                 Updated Node Allocatable limit across pods
+default       53m         Normal    NodeHasSufficientPID      node/<NODE-03>                                 Node <NODE-03> status is now: NodeHasSufficientPID
+default       53m         Normal    NodeHasNoDiskPressure     node/<NODE-03>                                 Node <NODE-03> status is now: NodeHasNoDiskPressure
+default       53m         Normal    Synced                    node/<NODE-04>                                  Node synced successfully
+kube-system   53m         Normal    SuccessfulCreate          daemonset/aws-node                                               Created pod: aws-node-9tgh2
+kube-system   53m         Normal    Scheduled                 pod/aws-node-9tgh2                                               Successfully assigned kube-system/aws-node-9tgh2 to <NODE-01>
+kube-system   53m         Normal    Scheduled                 pod/eks-pod-identity-agent-6zsqw                                 Successfully assigned kube-system/eks-pod-identity-agent-6zsqw to <NODE-01>
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-6zsqw                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Scheduled                 pod/aws-node-b7n6t                                               Successfully assigned kube-system/aws-node-b7n6t to <NODE-04>
+kube-system   53m         Normal    Scheduled                 pod/aws-node-qd46x                                               Successfully assigned kube-system/aws-node-qd46x to <NODE-03>
+kube-system   53m         Normal    Scheduled                 pod/eks-pod-identity-agent-mfjkk                                 Successfully assigned kube-system/eks-pod-identity-agent-mfjkk to <NODE-03>
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-mfjkk                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Pulling                   pod/aws-node-qd46x                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    SuccessfulCreate          daemonset/aws-node                                               Created pod: aws-node-qd46x
+default       53m         Normal    NodeHasNoDiskPressure     node/<NODE-04>                                  Node <NODE-04> status is now: NodeHasNoDiskPressure
+kube-system   53m         Normal    SuccessfulCreate          daemonset/aws-node                                               Created pod: aws-node-b7n6t
+kube-system   53m         Normal    Pulling                   pod/aws-node-9tgh2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3"
+default       53m         Normal    Synced                    node/<NODE-03>                                 Node synced successfully
+kube-system   53m         Normal    SuccessfulCreate          daemonset/eks-pod-identity-agent                                 Created pod: eks-pod-identity-agent-6zsqw
+kube-system   53m         Normal    SuccessfulCreate          daemonset/eks-pod-identity-agent                                 Created pod: eks-pod-identity-agent-mfjkk
+default       53m         Normal    Synced                    node/<NODE-01>                                  Node synced successfully
+default       53m         Normal    NodeAllocatableEnforced   node/<NODE-04>                                  Updated Node Allocatable limit across pods
+default       53m         Normal    NodeHasSufficientPID      node/<NODE-04>                                  Node <NODE-04> status is now: NodeHasSufficientPID
+default       53m         Normal    NodeHasSufficientMemory   node/<NODE-04>                                  Node <NODE-04> status is now: NodeHasSufficientMemory
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-6zsqw                                 Container started
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-6zsqw                                 Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-6zsqw                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 1.281s (1.281s including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Pulling                   pod/aws-node-b7n6t                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    SuccessfulCreate          daemonset/eks-pod-identity-agent                                 Created pod: eks-pod-identity-agent-bmk6c
+kube-system   53m         Normal    Scheduled                 pod/eks-pod-identity-agent-bmk6c                                 Successfully assigned kube-system/eks-pod-identity-agent-bmk6c to <NODE-04>
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-bmk6c                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-mfjkk                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 2.503s (2.503s including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-bmk6c                                 Container started
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-bmk6c                                 Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-bmk6c                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 1.284s (1.284s including waiting). Image size: 15197176 bytes.
+default       53m         Normal    RegisteredNode            node/<NODE-03>                                 Node <NODE-03> event: Registered Node <NODE-03> in Controller
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-mfjkk                                 Container created
+default       53m         Normal    RegisteredNode            node/<NODE-04>                                  Node <NODE-04> event: Registered Node <NODE-04> in Controller
+default       53m         Normal    RegisteredNode            node/<NODE-01>                                  Node <NODE-01> event: Registered Node <NODE-01> in Controller
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-mfjkk                                 Container started
+kube-system   53m         Normal    Pulled                    pod/aws-node-9tgh2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3" in 3.256s (3.256s including waiting). Image size: 69724381 bytes.
+kube-system   53m         Normal    Started                   pod/aws-node-qd46x                                               Container started
+kube-system   53m         Normal    Pulled                    pod/aws-node-b7n6t                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3" in 3.048s (3.048s including waiting). Image size: 69724381 bytes.
+kube-system   53m         Normal    Pulled                    pod/aws-node-qd46x                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3" in 4.043s (4.043s including waiting). Image size: 69724381 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-qd46x                                               Container created
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-mfjkk                                 Container created
+kube-system   53m         Normal    Started                   pod/aws-node-b7n6t                                               Container started
+kube-system   53m         Normal    Created                   pod/aws-node-b7n6t                                               Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-mfjkk                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 257ms (257ms including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-mfjkk                                 Container started
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-mfjkk                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Created                   pod/aws-node-9tgh2                                               Container created
+kube-system   53m         Normal    Started                   pod/aws-node-9tgh2                                               Container started
+kube-system   53m         Normal    Pulling                   pod/aws-node-9tgh2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    Pulling                   pod/aws-node-qd46x                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    Pulling                   pod/aws-node-b7n6t                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-6zsqw                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-6zsqw                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 80ms (80ms including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-bmk6c                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-6zsqw                                 Container started
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-6zsqw                                 Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-bmk6c                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 82ms (82ms including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-bmk6c                                 Container created
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-bmk6c                                 Container started
+kube-system   53m         Normal    Started                   pod/aws-node-b7n6t                                               Container started
+kube-system   53m         Normal    Pulling                   pod/aws-node-9tgh2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1"
+kube-system   53m         Normal    Created                   pod/aws-node-b7n6t                                               Container created
+kube-system   53m         Normal    Pulled                    pod/aws-node-b7n6t                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3" in 1.13s (1.13s including waiting). Image size: 57915596 bytes.
+kube-system   53m         Normal    Pulling                   pod/aws-node-b7n6t                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1"
+kube-system   53m         Normal    Pulled                    pod/aws-node-9tgh2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3" in 1.15s (1.15s including waiting). Image size: 57915596 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-9tgh2                                               Container created
+kube-system   53m         Normal    Started                   pod/aws-node-9tgh2                                               Container started
+kube-system   53m         Normal    Created                   pod/aws-node-qd46x                                               Container created
+kube-system   53m         Normal    Pulled                    pod/aws-node-9tgh2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1" in 1.071s (1.071s including waiting). Image size: 33957519 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-9tgh2                                               Container created
+kube-system   53m         Normal    Started                   pod/aws-node-b7n6t                                               Container started
+kube-system   53m         Normal    Created                   pod/aws-node-b7n6t                                               Container created
+kube-system   53m         Normal    Pulled                    pod/aws-node-b7n6t                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1" in 965ms (965ms including waiting). Image size: 33957519 bytes.
+kube-system   53m         Normal    Pulled                    pod/aws-node-qd46x                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3" in 2.092s (2.092s including waiting). Image size: 57915596 bytes.
+kube-system   53m         Normal    Started                   pod/aws-node-9tgh2                                               Container started
+kube-system   53m         Normal    Started                   pod/aws-node-qd46x                                               Container started
+kube-system   53m         Normal    Pulling                   pod/aws-node-qd46x                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1"
+default       53m         Normal    NodeHasNoDiskPressure     node/<NODE-02>                                  Node <NODE-02> status is now: NodeHasNoDiskPressure
+default       53m         Normal    NodeHasSufficientMemory   node/<NODE-02>                                  Node <NODE-02> status is now: NodeHasSufficientMemory
+default       53m         Normal    NodeHasSufficientPID      node/<NODE-02>                                  Node <NODE-02> status is now: NodeHasSufficientPID
+default       53m         Normal    NodeAllocatableEnforced   node/<NODE-02>                                  Updated Node Allocatable limit across pods
+default       53m         Warning   InvalidDiskCapacity       node/<NODE-02>                                  invalid capacity 0 on image filesystem
+default       53m         Normal    Starting                  node/<NODE-02>                                  Starting kubelet.
+default       53m         Normal    NodeReady                 node/<NODE-01>                                  Node <NODE-01> status is now: NodeReady
+kube-system   53m         Normal    Pulled                    pod/aws-node-qd46x                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1" in 1.933s (1.933s including waiting). Image size: 33957519 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-qd46x                                               Container created
+kube-system   53m         Normal    Started                   pod/aws-node-qd46x                                               Container started
+default       53m         Normal    NodeReady                 node/<NODE-04>                                  Node <NODE-04> status is now: NodeReady
+default       53m         Normal    Synced                    node/<NODE-02>                                  Node synced successfully
+kube-system   53m         Normal    SuccessfulCreate          daemonset/aws-node                                               Created pod: aws-node-t4cm2
+default       53m         Normal    NodeReady                 node/<NODE-03>                                 Node <NODE-03> status is now: NodeReady
+kube-system   53m         Normal    Scheduled                 pod/aws-node-t4cm2                                               Successfully assigned kube-system/aws-node-t4cm2 to <NODE-02>
+kube-system   53m         Normal    SuccessfulCreate          daemonset/eks-pod-identity-agent                                 Created pod: eks-pod-identity-agent-lvjf5
+kube-system   53m         Normal    Pulling                   pod/aws-node-t4cm2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-lvjf5                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Scheduled                 pod/eks-pod-identity-agent-lvjf5                                 Successfully assigned kube-system/eks-pod-identity-agent-lvjf5 to <NODE-02>
+default       53m         Normal    RegisteredNode            node/<NODE-02>                                  Node <NODE-02> event: Registered Node <NODE-02> in Controller
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-lvjf5                                 Container started
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-lvjf5                                 Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-lvjf5                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 2.287s (2.287s including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Pulling                   pod/eks-pod-identity-agent-lvjf5                                 Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37"
+kube-system   53m         Normal    Pulling                   pod/aws-node-t4cm2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3"
+kube-system   53m         Normal    Started                   pod/aws-node-t4cm2                                               Container started
+kube-system   53m         Normal    Created                   pod/eks-pod-identity-agent-lvjf5                                 Container created
+kube-system   53m         Normal    Started                   pod/eks-pod-identity-agent-lvjf5                                 Container started
+kube-system   53m         Normal    Created                   pod/aws-node-t4cm2                                               Container created
+kube-system   53m         Normal    Pulled                    pod/eks-pod-identity-agent-lvjf5                                 Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37" in 155ms (155ms including waiting). Image size: 15197176 bytes.
+kube-system   53m         Normal    Pulled                    pod/aws-node-t4cm2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.22.4-eksbuild.3" in 3.789s (3.789s including waiting). Image size: 69724381 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-t4cm2                                               Container created
+kube-system   53m         Normal    Pulling                   pod/aws-node-t4cm2                                               Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1"
+kube-system   53m         Normal    Pulled                    pod/aws-node-t4cm2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3" in 2.045s (2.045s including waiting). Image size: 57915596 bytes.
+kube-system   53m         Normal    Started                   pod/aws-node-t4cm2                                               Container started
+kube-system   53m         Normal    Pulled                    pod/aws-node-t4cm2                                               Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1" in 1.897s (1.897s including waiting). Image size: 33957519 bytes.
+kube-system   53m         Normal    Created                   pod/aws-node-t4cm2                                               Container created
+kube-system   53m         Normal    Started                   pod/aws-node-t4cm2                                               Container started
+default       53m         Normal    NodeReady                 node/<NODE-02>                                  Node <NODE-02> status is now: NodeReady
+kube-system   52m         Normal    Pulling                   pod/kube-proxy-jm8ms                                             Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21"
+kube-system   52m         Normal    Pulling                   pod/kube-proxy-58hcl                                             Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21"
+kube-system   52m         Normal    NoPods                    poddisruptionbudget/coredns                                      No matching pods found
+kube-system   52m         Normal    Pulling                   pod/kube-proxy-6fjd4                                             Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21"
+kube-system   52m         Normal    Scheduled                 pod/kube-proxy-6fjd4                                             Successfully assigned kube-system/kube-proxy-6fjd4 to <NODE-04>
+kube-system   52m         Normal    Scheduled                 pod/kube-proxy-58hcl                                             Successfully assigned kube-system/kube-proxy-58hcl to <NODE-01>
+kube-system   52m         Normal    SuccessfulCreate          daemonset/kube-proxy                                             Created pod: kube-proxy-9wmzl
+kube-system   52m         Normal    Scheduled                 pod/kube-proxy-9wmzl                                             Successfully assigned kube-system/kube-proxy-9wmzl to <NODE-02>
+kube-system   52m         Normal    Pulling                   pod/kube-proxy-9wmzl                                             Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21"
+kube-system   52m         Normal    SuccessfulCreate          daemonset/kube-proxy                                             Created pod: kube-proxy-58hcl
+kube-system   52m         Normal    SuccessfulCreate          daemonset/kube-proxy                                             Created pod: kube-proxy-6fjd4
+kube-system   52m         Normal    SuccessfulCreate          daemonset/kube-proxy                                             Created pod: kube-proxy-jm8ms
+kube-system   52m         Normal    Scheduled                 pod/kube-proxy-jm8ms                                             Successfully assigned kube-system/kube-proxy-jm8ms to <NODE-03>
+kube-system   52m         Normal    Started                   pod/kube-proxy-58hcl                                             Container started
+kube-system   52m         Normal    Pulled                    pod/kube-proxy-58hcl                                             Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21" in 886ms (887ms including waiting). Image size: 31895353 bytes.
+kube-system   52m         Normal    Created                   pod/kube-proxy-6fjd4                                             Container created
+kube-system   52m         Normal    Pulled                    pod/kube-proxy-6fjd4                                             Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21" in 950ms (950ms including waiting). Image size: 31895353 bytes.
+kube-system   52m         Normal    SuccessfulCreate          replicaset/coredns-9f58dc946                                     Created pod: coredns-9f58dc946-nxwm4
+kube-system   52m         Normal    Started                   pod/kube-proxy-6fjd4                                             Container started
+kube-system   52m         Normal    Scheduled                 pod/coredns-9f58dc946-h2xtv                                      Successfully assigned kube-system/coredns-9f58dc946-h2xtv to <NODE-03>
+kube-system   52m         Normal    SuccessfulCreate          replicaset/coredns-9f58dc946                                     Created pod: coredns-9f58dc946-h2xtv
+kube-system   52m         Normal    Scheduled                 pod/coredns-9f58dc946-nxwm4                                      Successfully assigned kube-system/coredns-9f58dc946-nxwm4 to <NODE-03>
+kube-system   52m         Normal    ScalingReplicaSet         deployment/coredns                                               Scaled up replica set coredns-9f58dc946 from 0 to 2
+kube-system   52m         Normal    Created                   pod/kube-proxy-58hcl                                             Container created
+kube-system   52m         Normal    Pulled                    pod/kube-proxy-jm8ms                                             Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21" in 2.035s (2.035s including waiting). Image size: 31895353 bytes.
+kube-system   52m         Normal    Pulled                    pod/kube-proxy-9wmzl                                             Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21" in 1.518s (1.518s including waiting). Image size: 31895353 bytes.
+kube-system   52m         Normal    Created                   pod/kube-proxy-9wmzl                                             Container created
+kube-system   52m         Normal    Started                   pod/kube-proxy-9wmzl                                             Container started
+kube-system   52m         Normal    Created                   pod/kube-proxy-jm8ms                                             Container created
+kube-system   52m         Normal    Started                   pod/kube-proxy-jm8ms                                             Container started
+kube-system   52m         Normal    Pulling                   pod/coredns-9f58dc946-h2xtv                                      Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.13.2-eksbuild.21"
+kube-system   52m         Normal    Pulling                   pod/coredns-9f58dc946-nxwm4                                      Pulling image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.13.2-eksbuild.21"
+kube-system   52m         Normal    Started                   pod/coredns-9f58dc946-h2xtv                                      Container started
+kube-system   52m         Normal    Created                   pod/coredns-9f58dc946-nxwm4                                      Container created
+kube-system   52m         Normal    Pulled                    pod/coredns-9f58dc946-h2xtv                                      Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.13.2-eksbuild.21" in 1.972s (1.972s including waiting). Image size: 25928023 bytes.
+kube-system   52m         Normal    Created                   pod/coredns-9f58dc946-h2xtv                                      Container created
+kube-system   52m         Normal    Started                   pod/coredns-9f58dc946-nxwm4                                      Container started
+kube-system   52m         Normal    Pulled                    pod/coredns-9f58dc946-nxwm4                                      Successfully pulled image "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.13.2-eksbuild.21" in 2.023s (2.023s including waiting). Image size: 25928023 bytes.
+kube-system   12m         Normal    Scheduled                 pod/aws-load-balancer-controller-5698d6c4b8-s2cdc                Successfully assigned kube-system/aws-load-balancer-controller-5698d6c4b8-s2cdc to <NODE-01>
+kube-system   12m         Normal    SuccessfulCreate          replicaset/aws-load-balancer-controller-5698d6c4b8               Created pod: aws-load-balancer-controller-5698d6c4b8-s2cdc
+kube-system   12m         Normal    ScalingReplicaSet         deployment/aws-load-balancer-controller                          Scaled up replica set aws-load-balancer-controller-5698d6c4b8 from 0 to 2
+kube-system   12m         Normal    SuccessfulCreate          replicaset/aws-load-balancer-controller-5698d6c4b8               Created pod: aws-load-balancer-controller-5698d6c4b8-dfn5c
+kube-system   12m         Normal    Scheduled                 pod/aws-load-balancer-controller-5698d6c4b8-dfn5c                Successfully assigned kube-system/aws-load-balancer-controller-5698d6c4b8-dfn5c to <NODE-04>
+kube-system   12m         Normal    Pulling                   pod/aws-load-balancer-controller-5698d6c4b8-dfn5c                Pulling image "public.ecr.aws/eks/aws-load-balancer-controller:v2.14.1"
+kube-system   12m         Normal    Pulling                   pod/aws-load-balancer-controller-5698d6c4b8-s2cdc                Pulling image "public.ecr.aws/eks/aws-load-balancer-controller:v2.14.1"
+kube-system   12m         Normal    Started                   pod/aws-load-balancer-controller-5698d6c4b8-dfn5c                Container started
+kube-system   12m         Normal    Created                   pod/aws-load-balancer-controller-5698d6c4b8-s2cdc                Container created
+kube-system   12m         Normal    Pulled                    pod/aws-load-balancer-controller-5698d6c4b8-dfn5c                Successfully pulled image "public.ecr.aws/eks/aws-load-balancer-controller:v2.14.1" in 855ms (855ms including waiting). Image size: 27078263 bytes.
+kube-system   12m         Normal    Created                   pod/aws-load-balancer-controller-5698d6c4b8-dfn5c                Container created
+kube-system   12m         Normal    Started                   pod/aws-load-balancer-controller-5698d6c4b8-s2cdc                Container started
+kube-system   12m         Normal    Pulled                    pod/aws-load-balancer-controller-5698d6c4b8-s2cdc                Successfully pulled image "public.ecr.aws/eks/aws-load-balancer-controller:v2.14.1" in 917ms (917ms including waiting). Image size: 27078263 bytes.
+kube-system   12m         Normal    LeaderElection            lease/aws-load-balancer-controller-leader                        aws-load-balancer-controller-5698d6c4b8-s2cdc_43504892-9975-4fba-86be-4b1b6481cd92 became leader
+monitoring    12m         Normal    SuccessfulCreate          job/kube-prometheus-stack-admission-create                       Created pod: kube-prometheus-stack-admission-create-22hph
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-admission-create-22hph                 Successfully assigned monitoring/kube-prometheus-stack-admission-create-22hph to <NODE-01>
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-admission-create-22hph                 Pulling image "ghcr.io/jkroepke/kube-webhook-certgen:1.8.8"
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-admission-create-22hph                 Successfully pulled image "ghcr.io/jkroepke/kube-webhook-certgen:1.8.8" in 460ms (460ms including waiting). Image size: 9457373 bytes.
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-admission-create-22hph                 Container started
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-admission-create-22hph                 Container created
+monitoring    12m         Normal    Completed                 job/kube-prometheus-stack-admission-create                       Job completed
+monitoring    12m         Normal    ScalingReplicaSet         deployment/kube-prometheus-stack-grafana                         Scaled up replica set kube-prometheus-stack-grafana-5cd4986778 from 0 to 1
+monitoring    12m         Normal    ScalingReplicaSet         deployment/kube-prometheus-stack-operator                        Scaled up replica set kube-prometheus-stack-operator-7fd66ffc65 from 0 to 1
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-prometheus-node-exporter-8s4dn         Successfully assigned monitoring/kube-prometheus-stack-prometheus-node-exporter-8s4dn to <NODE-01>
+monitoring    12m         Normal    SuccessfulCreate          replicaset/kube-prometheus-stack-kube-state-metrics-7bb8776849   Created pod: kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm
+monitoring    12m         Normal    ScalingReplicaSet         deployment/kube-prometheus-stack-kube-state-metrics              Scaled up replica set kube-prometheus-stack-kube-state-metrics-7bb8776849 from 0 to 1
+monitoring    12m         Normal    SuccessfulCreate          daemonset/kube-prometheus-stack-prometheus-node-exporter         Created pod: kube-prometheus-stack-prometheus-node-exporter-8s4dn
+monitoring    12m         Normal    SuccessfulCreate          daemonset/kube-prometheus-stack-prometheus-node-exporter         Created pod: kube-prometheus-stack-prometheus-node-exporter-d8jw2
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-prometheus-node-exporter-d8jw2         Successfully assigned monitoring/kube-prometheus-stack-prometheus-node-exporter-d8jw2 to <NODE-02>
+monitoring    12m         Normal    SuccessfulCreate          daemonset/kube-prometheus-stack-prometheus-node-exporter         Created pod: kube-prometheus-stack-prometheus-node-exporter-v7sr8
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-prometheus-node-exporter-v7sr8         Successfully assigned monitoring/kube-prometheus-stack-prometheus-node-exporter-v7sr8 to <NODE-04>
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-prometheus-node-exporter-d8jw2         Pulling image "quay.io/prometheus/node-exporter:v1.12.1-distroless"
+monitoring    12m         Normal    SuccessfulCreate          replicaset/kube-prometheus-stack-grafana-5cd4986778              Created pod: kube-prometheus-stack-grafana-5cd4986778-4ltrq
+monitoring    12m         Normal    SuccessfulCreate          replicaset/kube-prometheus-stack-operator-7fd66ffc65             Created pod: kube-prometheus-stack-operator-7fd66ffc65-tb8wn
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-operator-7fd66ffc65-tb8wn              Pulling image "quay.io/prometheus-operator/prometheus-operator:v0.93.1"
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-operator-7fd66ffc65-tb8wn              Successfully assigned monitoring/kube-prometheus-stack-operator-7fd66ffc65-tb8wn to <NODE-04>
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-prometheus-node-exporter-v7sr8         Pulling image "quay.io/prometheus/node-exporter:v1.12.1-distroless"
+monitoring    12m         Normal    SuccessfulCreate          daemonset/kube-prometheus-stack-prometheus-node-exporter         Created pod: kube-prometheus-stack-prometheus-node-exporter-kjqsn
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-prometheus-node-exporter-kjqsn         Pulling image "quay.io/prometheus/node-exporter:v1.12.1-distroless"
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-prometheus-node-exporter-kjqsn         Successfully assigned monitoring/kube-prometheus-stack-prometheus-node-exporter-kjqsn to <NODE-03>
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm    Pulling image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0"
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm    Successfully assigned monitoring/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm to <NODE-01>
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Successfully assigned monitoring/kube-prometheus-stack-grafana-5cd4986778-4ltrq to <NODE-01>
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-prometheus-node-exporter-8s4dn         Pulling image "quay.io/prometheus/node-exporter:v1.12.1-distroless"
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-prometheus-node-exporter-v7sr8         Successfully pulled image "quay.io/prometheus/node-exporter:v1.12.1-distroless" in 1.413s (1.413s including waiting). Image size: 13123706 bytes.
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Pulling image "quay.io/kiwigrid/k8s-sidecar:2.11.2"
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-prometheus-node-exporter-v7sr8         Container created
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-prometheus-node-exporter-v7sr8         Container started
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm    Successfully pulled image "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0" in 1.227s (1.227s including waiting). Image size: 19261896 bytes.
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-operator-7fd66ffc65-tb8wn              Successfully pulled image "quay.io/prometheus-operator/prometheus-operator:v0.93.1" in 1.668s (1.668s including waiting). Image size: 20931128 bytes.
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm    Container started
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm    Container created
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-operator-7fd66ffc65-tb8wn              Container started
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-operator-7fd66ffc65-tb8wn              Container created
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-prometheus-node-exporter-kjqsn         Container created
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-prometheus-node-exporter-kjqsn         Successfully pulled image "quay.io/prometheus/node-exporter:v1.12.1-distroless" in 2.32s (2.32s including waiting). Image size: 13123706 bytes.
+monitoring    12m         Normal    Scheduled                 pod/prometheus-kube-prometheus-stack-prometheus-0                Successfully assigned monitoring/prometheus-kube-prometheus-stack-prometheus-0 to <NODE-04>
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-prometheus-node-exporter-d8jw2         Container created
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-prometheus-node-exporter-d8jw2         Container started
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-prometheus-node-exporter-kjqsn         Container started
+monitoring    12m         Normal    SuccessfulCreate          statefulset/prometheus-kube-prometheus-stack-prometheus          Create Pod prometheus-kube-prometheus-stack-prometheus-0 in StatefulSet prometheus-kube-prometheus-stack-prometheus successful
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-prometheus-node-exporter-d8jw2         Successfully pulled image "quay.io/prometheus/node-exporter:v1.12.1-distroless" in 3.21s (3.21s including waiting). Image size: 13123706 bytes.
+monitoring    12m         Normal    Pulling                   pod/prometheus-kube-prometheus-stack-prometheus-0                Pulling image "quay.io/prometheus-operator/prometheus-config-reloader:v0.93.1"
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Successfully pulled image "quay.io/kiwigrid/k8s-sidecar:2.11.2" in 3.844s (3.844s including waiting). Image size: 30425575 bytes.
+monitoring    12m         Normal    Pulled                    pod/prometheus-kube-prometheus-stack-prometheus-0                Successfully pulled image "quay.io/prometheus-operator/prometheus-config-reloader:v0.93.1" in 656ms (656ms including waiting). Image size: 14570918 bytes.
+monitoring    12m         Normal    Created                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container created
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-prometheus-node-exporter-8s4dn         Container started
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container created
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-prometheus-node-exporter-8s4dn         Successfully pulled image "quay.io/prometheus/node-exporter:v1.12.1-distroless" in 3.888s (3.888s including waiting). Image size: 13123706 bytes.
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-prometheus-node-exporter-8s4dn         Container created
+monitoring    12m         Normal    Pulling                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Pulling image "docker.io/grafana/grafana:13.2.1-distroless"
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container image "quay.io/kiwigrid/k8s-sidecar:2.11.2" already present on machine and can be accessed by the pod
+monitoring    12m         Normal    Started                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container started
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container started
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container started
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container created
+monitoring    12m         Normal    Pulling                   pod/prometheus-kube-prometheus-stack-prometheus-0                Pulling image "quay.io/prometheus/prometheus:v3.14.0-distroless"
+monitoring    12m         Normal    Created                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container created
+monitoring    12m         Normal    Pulled                    pod/prometheus-kube-prometheus-stack-prometheus-0                Container image "quay.io/prometheus-operator/prometheus-config-reloader:v0.93.1" already present on machine and can be accessed by the pod
+monitoring    12m         Normal    Pulled                    pod/prometheus-kube-prometheus-stack-prometheus-0                Successfully pulled image "quay.io/prometheus/prometheus:v3.14.0-distroless" in 1.857s (1.857s including waiting). Image size: 109074849 bytes.
+monitoring    12m         Normal    Created                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container created
+monitoring    12m         Normal    Started                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container started
+monitoring    12m         Normal    Started                   pod/prometheus-kube-prometheus-stack-prometheus-0                Container started
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container started
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Successfully pulled image "docker.io/grafana/grafana:13.2.1-distroless" in 11.919s (11.919s including waiting). Image size: 458445260 bytes.
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Container created
+monitoring    12m         Warning   Unhealthy                 pod/kube-prometheus-stack-grafana-5cd4986778-4ltrq               Readiness probe failed: Get "http://<IP-08>:3000/api/health": dial tcp <IP-08>:3000: connect: connection refused
+monitoring    12m         Normal    Scheduled                 pod/kube-prometheus-stack-admission-patch-cnm55                  Successfully assigned monitoring/kube-prometheus-stack-admission-patch-cnm55 to <NODE-01>
+monitoring    12m         Normal    SuccessfulCreate          job/kube-prometheus-stack-admission-patch                        Created pod: kube-prometheus-stack-admission-patch-cnm55
+monitoring    12m         Normal    Pulled                    pod/kube-prometheus-stack-admission-patch-cnm55                  Container image "ghcr.io/jkroepke/kube-webhook-certgen:1.8.8" already present on machine and can be accessed by the pod
+monitoring    12m         Normal    Created                   pod/kube-prometheus-stack-admission-patch-cnm55                  Container created
+monitoring    12m         Normal    Started                   pod/kube-prometheus-stack-admission-patch-cnm55                  Container started
+monitoring    12m         Normal    Completed                 job/kube-prometheus-stack-admission-patch                        Job completed
+default       6m54s       Normal    Scheduled                 pod/http-demo-75ccdcd48f-mz88h                                   Successfully assigned default/http-demo-75ccdcd48f-mz88h to <NODE-04>
+default       6m54s       Normal    SuccessfulCreate          replicaset/http-demo-75ccdcd48f                                  Created pod: http-demo-75ccdcd48f-mz88h
+default       6m54s       Normal    ScalingReplicaSet         deployment/http-demo                                             Scaled up replica set http-demo-75ccdcd48f from 0 to 2
+default       6m54s       Normal    Scheduled                 pod/http-demo-75ccdcd48f-h8cqp                                   Successfully assigned default/http-demo-75ccdcd48f-h8cqp to <NODE-01>
+default       6m54s       Normal    SuccessfulCreate          replicaset/http-demo-75ccdcd48f                                  Created pod: http-demo-75ccdcd48f-h8cqp
+default       6m53s       Normal    Pulling                   pod/http-demo-75ccdcd48f-mz88h                                   Pulling image "nginxinc/nginx-unprivileged:1.28.0-alpine"
+default       6m53s       Normal    Pulling                   pod/http-demo-75ccdcd48f-h8cqp                                   Pulling image "nginxinc/nginx-unprivileged:1.28.0-alpine"
+default       6m52s       Normal    Started                   pod/http-demo-75ccdcd48f-h8cqp                                   Container started
+default       6m52s       Normal    Pulled                    pod/http-demo-75ccdcd48f-mz88h                                   Successfully pulled image "nginxinc/nginx-unprivileged:1.28.0-alpine" in 947ms (947ms including waiting). Image size: 21018519 bytes.
+default       6m52s       Normal    Created                   pod/http-demo-75ccdcd48f-mz88h                                   Container created
+default       6m52s       Normal    Started                   pod/http-demo-75ccdcd48f-mz88h                                   Container started
+default       6m52s       Normal    Created                   pod/http-demo-75ccdcd48f-h8cqp                                   Container created
+default       6m52s       Normal    Pulled                    pod/http-demo-75ccdcd48f-h8cqp                                   Successfully pulled image "nginxinc/nginx-unprivileged:1.28.0-alpine" in 1.098s (1.098s including waiting). Image size: 21018519 bytes.
+default       6m16s       Normal    SuccessfullyReconciled    ingress/lab01-http-demo                                          Successfully reconciled
+default       6m15s       Normal    SuccessfullyReconciled    targetgroupbinding/k8s-default-httpdemo-da63177636               Successfully reconciled

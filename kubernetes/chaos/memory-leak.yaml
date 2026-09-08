@@ -1,0 +1,72 @@
+# Lab 03: deliberate container-level OOM, bounded by a 128Mi cgroup limit.
+# The allocator attempts to exceed the limit; it does not bypass enforcement.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lab03
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: memory-leak
+  namespace: lab03
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: memory-leak
+  template:
+    metadata:
+      labels:
+        app: memory-leak
+    spec:
+      # Use the isolated canary group; keep monitoring on the apps group.
+      nodeSelector:
+        workload: canary
+      tolerations:
+        - key: workload
+          operator: Equal
+          value: canary
+          effect: NoSchedule
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: memory-leak
+          image: python:3.12.10-alpine3.21
+          command: ["python", "-u", "-c"]
+          args:
+            - |
+              import time
+
+              # Allow monitoring to discover the container before growth starts.
+              print("Starting intentional memory leak; limit is 128Mi", flush=True)
+              time.sleep(120)
+              retained = []
+              chunk_bytes = 4 * 1024 * 1024
+              while True:
+                  chunk = bytearray(chunk_bytes)
+                  # Touch every page so allocation consumes physical memory.
+                  for offset in range(0, chunk_bytes, 4096):
+                      chunk[offset] = 1
+                  retained.append(chunk)
+                  print(f"Retained {len(retained) * 4} MiB of payload", flush=True)
+                  time.sleep(5)
+          resources:
+            requests:
+              cpu: 25m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]

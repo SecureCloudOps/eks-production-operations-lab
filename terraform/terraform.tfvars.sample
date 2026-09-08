@@ -1,0 +1,43 @@
+# Copy to terraform.tfvars and customize before an account-specific plan.
+# Authenticate via AWS_PROFILE/SSO/environment; never put credentials here.
+aws_region         = "us-east-1"
+availability_zones = ["us-east-1a", "us-east-1b"]
+cluster_name       = "eks-operations-lab"
+cluster_version    = "1.35"
+environment        = "lab"
+vpc_cidr           = "10.0.0.0/16"
+
+# EXAMPLE ONLY: RFC 5737 documentation address, not a usable operator network.
+# Replace with the VPN/VPC runner source as seen at the private API, preferably /32.
+# A public home IP alone does not provide routing to this private endpoint.
+operator_cidr = "192.0.2.1/32"
+
+# Leave empty for private-only access. Public API access is explicit opt-in.
+operator_public_access_cidrs = []
+
+tags = {
+  Purpose = "eks-production-operations-lab"
+}
+
+# Explicit opt-in only, even though the training policy is fixture-bucket scoped.
+enable_lab04          = false
+lab04_least_privilege = false
+
+# Enable and validate before deploying the AWS-facing fixtures in Labs 04/05.
+enable_load_balancer_controller = true
+
+# Controlled-lab minimum; retain 2 when managing an existing two-node system group.
+system_node_count = 1
+# New clusters use EKS AWS-owned encryption. Existing CMK clusters must retain true.
+use_customer_managed_kms_key = false
+
+# Pin these independently before Lab 01; never advance all workers with the control plane.
+node_group_versions = {
+  canary = "1.35"
+  apps   = "1.35"
+  system = "1.35"
+}
+
+# Optional: populate with verified regional EKS release strings before an upgrade.
+node_group_ami_release_versions = {}
+addon_versions                 = {}

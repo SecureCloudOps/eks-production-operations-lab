@@ -1,0 +1,509 @@
+# Lab 01 preflight evidence
+# Run: 20260908T154548Z; region: us-east-1; operator publication alias: operator-1.
+# This file assembles real saved outputs after execution; it is not a contemporaneous signed GO decision.
+# A complete target-1.36 compatibility certification was not captured. See limitations in summary.md.
+
+# cluster-before
+{
+  "name": "eks-operations-lab",
+  "status": "ACTIVE",
+  "upgradePolicy": {
+    "supportType": "EXTENDED"
+  },
+  "version": "1.35"
+}
+
+# cluster-immediately-before-upgrade
+{
+  "name": "eks-operations-lab",
+  "status": "ACTIVE",
+  "upgradePolicy": {
+    "supportType": "EXTENDED"
+  },
+  "version": "1.35"
+}
+
+# cluster-after
+{
+  "name": "eks-operations-lab",
+  "status": "ACTIVE",
+  "upgradePolicy": {
+    "supportType": "EXTENDED"
+  },
+  "version": "1.36"
+}
+
+# Region-reported lifecycle
+[
+  {
+    "clusterType": "eks",
+    "clusterVersion": "1.36",
+    "defaultPlatformVersion": "eks.10",
+    "defaultVersion": true,
+    "endOfExtendedSupportDate": "2028-08-01T20:00:00-04:00",
+    "endOfStandardSupportDate": "2027-08-01T20:00:00-04:00",
+    "kubernetesPatchVersion": "1.36.2",
+    "releaseDate": "2026-06-01T20:00:00-04:00",
+    "status": "STANDARD_SUPPORT",
+    "versionStatus": "STANDARD_SUPPORT"
+  },
+  {
+    "clusterType": "eks",
+    "clusterVersion": "1.35",
+    "defaultPlatformVersion": "eks.21",
+    "defaultVersion": false,
+    "endOfExtendedSupportDate": "2028-03-26T20:00:00-04:00",
+    "endOfStandardSupportDate": "2027-03-26T20:00:00-04:00",
+    "kubernetesPatchVersion": "1.35.6",
+    "releaseDate": "2026-01-26T19:00:00-05:00",
+    "status": "STANDARD_SUPPORT",
+    "versionStatus": "STANDARD_SUPPORT"
+  }
+]
+
+# deprecated-apis-20260908T160517Z.txt
+2026-09-08T16:05:17Z
+12:05PM INF version 0.7.3 (git sha 57480c07b3f91238f12a35d0ec88d9368aae99aa)
+12:05PM INF >>> Kube No Trouble `kubent` <<<
+12:05PM INF version 0.7.3 (git sha 57480c07b3f91238f12a35d0ec88d9368aae99aa)
+12:05PM INF Initializing collectors and retrieving data
+12:05PM INF Target K8s version is 1.36.0
+12:05PM INF Retrieved 37 resources from collector name=Cluster
+12:05PM INF Retrieved 103 resources from collector name="Helm v3"
+12:05PM INF Loaded ruleset name=custom.rego.tmpl
+12:05PM INF Loaded ruleset name=deprecated-1-16.rego
+12:05PM INF Loaded ruleset name=deprecated-1-22.rego
+12:05PM INF Loaded ruleset name=deprecated-1-25.rego
+12:05PM INF Loaded ruleset name=deprecated-1-26.rego
+12:05PM INF Loaded ruleset name=deprecated-1-27.rego
+12:05PM INF Loaded ruleset name=deprecated-1-29.rego
+12:05PM INF Loaded ruleset name=deprecated-1-32.rego
+12:05PM INF Loaded ruleset name=deprecated-future.rego
+
+kubent_exit_code=0
+
+
+# Observed deprecated API use
+apiserver_requested_deprecated_apis{group="",removed_release="",resource="endpoints",subresource="",version="v1"} 1
+
+2026-09-08T16:11:02Z
+Finding: core/v1 Endpoints requests observed.
+Disposition: non-blocking deprecation for the 1.35 -> 1.36 upgrade.
+Caller not identified; follow-up is migration to EndpointSlice.
+Scope: one API-server metrics snapshot; full compatibility review remains open.
+Source: https://kubernetes.io/docs/reference/kubernetes-api/core/endpoints-v1/
+
+
+# EKS readiness insights
+[
+  {
+    "category": "UPGRADE_READINESS",
+    "description": "Checks version of installed EKS add-ons to ensure they are compatible with the next version of Kubernetes. ",
+    "id": "218f441a-5b56-44c5-97ce-6f37dfee6225",
+    "insightStatus": {
+      "reason": "All installed EKS add-on versions are compatible with next Kubernetes version.",
+      "status": "PASSING"
+    },
+    "kubernetesVersion": "1.36",
+    "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+    "lastTransitionTime": "2026-09-08T10:49:05-04:00",
+    "name": "EKS add-on version compatibility"
+  },
+  {
+    "category": "UPGRADE_READINESS",
+    "description": "Checks if any nodes in the cluster are running Amazon Linux 2. Support for Amazon Linux 2 on Amazon EKS will end on November 26, 2025. Additionally, Amazon EKS will not release Amazon Linux 2 AMIs for Kubernetes version 1.33 and higher",
+    "id": "4f139f84-ba85-42b4-b822-4cbfc17e6019",
+    "insightStatus": {
+      "reason": "No Amazon Linux 2 nodes detected.",
+      "status": "PASSING"
+    },
+    "kubernetesVersion": "1.36",
+    "lastRefreshTime": "2026-09-08T10:50:06-04:00",
+    "lastTransitionTime": "2026-09-08T10:49:05-04:00",
+    "name": "Amazon Linux 2 compatibility"
+  },
+  {
+    "category": "UPGRADE_READINESS",
+    "description": "Checks for kubelet versions of worker nodes in the cluster to see if upgrade would cause non compliance with supported Kubernetes kubelet version skew policy.",
+    "id": "a2300334-e8b3-446e-9e54-5bcbc00b75a2",
+    "insightStatus": {
+      "reason": "Node kubelet versions match the cluster control plane version.",
+      "status": "PASSING"
+    },
+    "kubernetesVersion": "1.36",
+    "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+    "lastTransitionTime": "2026-09-08T10:49:05-04:00",
+    "name": "Kubelet version skew"
+  },
+  {
+    "category": "UPGRADE_READINESS",
+    "description": "Checks for any cluster health issues that prevent successful upgrade to the next Kubernetes version on EKS.",
+    "id": "5203e378-7fb3-4d00-95b8-8c51a3f26121",
+    "insightStatus": {
+      "reason": "No cluster health issues detected.",
+      "status": "PASSING"
+    },
+    "kubernetesVersion": "1.36",
+    "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+    "lastTransitionTime": "2026-09-08T10:49:05-04:00",
+    "name": "Cluster health issues"
+  },
+  {
+    "category": "UPGRADE_READINESS",
+    "description": "Checks version of kube-proxy in cluster to see if upgrade would cause non compliance with supported Kubernetes kube-proxy version skew policy.",
+    "id": "3fdad350-0e6c-4283-b7a4-58ab293416e9",
+    "insightStatus": {
+      "reason": "kube-proxy versions match the cluster control plane version.",
+      "status": "PASSING"
+    },
+    "kubernetesVersion": "1.36",
+    "lastRefreshTime": "2026-09-08T10:50:06-04:00",
+    "lastTransitionTime": "2026-09-08T10:49:05-04:00",
+    "name": "kube-proxy version skew"
+  }
+]
+{
+  "categorySpecificSummary": {
+    "addonCompatibilityDetails": [
+      {
+        "compatibleVersions": [
+          "v1.13.2-eksbuild.21",
+          "v1.13.2-eksbuild.24",
+          "v1.14.2-eksbuild.4",
+          "v1.14.3-eksbuild.2",
+          "v1.14.3-eksbuild.3",
+          "v1.14.3-eksbuild.9",
+          "v1.14.3-eksbuild.14",
+          "v1.14.3-eksbuild.16"
+        ],
+        "name": "coredns"
+      },
+      {
+        "compatibleVersions": [
+          "v1.3.10-eksbuild.3",
+          "v1.4.0-eksbuild.1",
+          "v1.4.0-eksbuild.2"
+        ],
+        "name": "eks-pod-identity-agent"
+      },
+      {
+        "compatibleVersions": [
+          "v1.35.3-eksbuild.21",
+          "v1.36.0-eksbuild.2",
+          "v1.36.0-eksbuild.4",
+          "v1.36.0-eksbuild.7",
+          "v1.36.0-eksbuild.9",
+          "v1.36.0-eksbuild.13",
+          "v1.36.0-eksbuild.14",
+          "v1.36.0-eksbuild.15",
+          "v1.36.0-eksbuild.17"
+        ],
+        "name": "kube-proxy"
+      },
+      {
+        "compatibleVersions": [
+          "v1.22.4-eksbuild.3",
+          "v1.23.0-eksbuild.1"
+        ],
+        "name": "vpc-cni"
+      }
+    ],
+    "deprecationDetails": []
+  },
+  "insightStatus": {
+    "reason": "All installed EKS add-on versions are compatible with next Kubernetes version.",
+    "status": "PASSING"
+  },
+  "kubernetesVersion": "1.36",
+  "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+  "name": "EKS add-on version compatibility"
+}
+{
+  "categorySpecificSummary": {
+    "addonCompatibilityDetails": [],
+    "deprecationDetails": []
+  },
+  "insightStatus": {
+    "reason": "kube-proxy versions match the cluster control plane version.",
+    "status": "PASSING"
+  },
+  "kubernetesVersion": "1.36",
+  "lastRefreshTime": "2026-09-08T10:50:06-04:00",
+  "name": "kube-proxy version skew"
+}
+{
+  "categorySpecificSummary": {
+    "addonCompatibilityDetails": [],
+    "deprecationDetails": []
+  },
+  "insightStatus": {
+    "reason": "No Amazon Linux 2 nodes detected.",
+    "status": "PASSING"
+  },
+  "kubernetesVersion": "1.36",
+  "lastRefreshTime": "2026-09-08T10:50:06-04:00",
+  "name": "Amazon Linux 2 compatibility"
+}
+{
+  "categorySpecificSummary": {
+    "addonCompatibilityDetails": [],
+    "deprecationDetails": []
+  },
+  "insightStatus": {
+    "reason": "No cluster health issues detected.",
+    "status": "PASSING"
+  },
+  "kubernetesVersion": "1.36",
+  "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+  "name": "Cluster health issues"
+}
+{
+  "categorySpecificSummary": {
+    "addonCompatibilityDetails": [],
+    "deprecationDetails": []
+  },
+  "insightStatus": {
+    "reason": "Node kubelet versions match the cluster control plane version.",
+    "status": "PASSING"
+  },
+  "kubernetesVersion": "1.36",
+  "lastRefreshTime": "2026-09-08T10:49:05-04:00",
+  "name": "Kubelet version skew"
+}
+
+# addon-before-*.json
+{
+  "addonName": "coredns",
+  "addonVersion": "v1.13.2-eksbuild.21",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "eks-pod-identity-agent",
+  "addonVersion": "v1.3.10-eksbuild.3",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "kube-proxy",
+  "addonVersion": "v1.35.3-eksbuild.21",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "vpc-cni",
+  "addonVersion": "v1.22.4-eksbuild.3",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+
+# addon-after-control-plane-*.json
+{
+  "addonName": "coredns",
+  "addonVersion": "v1.13.2-eksbuild.21",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "eks-pod-identity-agent",
+  "addonVersion": "v1.3.10-eksbuild.3",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "kube-proxy",
+  "addonVersion": "v1.35.3-eksbuild.21",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+{
+  "addonName": "vpc-cni",
+  "addonVersion": "v1.22.4-eksbuild.3",
+  "health": {
+    "issues": []
+  },
+  "status": "ACTIVE"
+}
+
+# Helm release inventory
+[
+  {
+    "app_version": "v2.14.1",
+    "chart": "aws-load-balancer-controller-1.14.1",
+    "name": "aws-load-balancer-controller",
+    "namespace": "kube-system",
+    "revision": "1",
+    "status": "deployed",
+    "updated": "2026-09-08 11:19:39.58595 -0400 EDT"
+  },
+  {
+    "app_version": "v0.93.1",
+    "chart": "kube-prometheus-stack-89.2.2",
+    "name": "kube-prometheus-stack",
+    "namespace": "monitoring",
+    "revision": "1",
+    "status": "deployed",
+    "updated": "2026-09-08 11:19:45.696545 -0400 EDT"
+  }
+]
+
+# Workload image inventory
+NAMESPACE	KIND	NAME	IMAGES
+default	Deployment	http-demo	nginxinc/nginx-unprivileged:1.28.0-alpine
+kube-system	Deployment	aws-load-balancer-controller	public.ecr.aws/eks/aws-load-balancer-controller:v2.14.1
+kube-system	Deployment	coredns	<account-id>.dkr.ecr.us-east-1.amazonaws.com/eks/coredns:v1.13.2-eksbuild.21
+monitoring	Deployment	kube-prometheus-stack-grafana	quay.io/kiwigrid/k8s-sidecar:2.11.2,quay.io/kiwigrid/k8s-sidecar:2.11.2,docker.io/grafana/grafana:13.2.1-distroless
+monitoring	Deployment	kube-prometheus-stack-kube-state-metrics	registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0
+monitoring	Deployment	kube-prometheus-stack-operator	quay.io/prometheus-operator/prometheus-operator:v0.93.1
+monitoring	StatefulSet	prometheus-kube-prometheus-stack-prometheus	quay.io/prometheus/prometheus:v3.14.0-distroless,quay.io/prometheus-operator/prometheus-config-reloader:v0.93.1
+kube-system	DaemonSet	aws-node	<account-id>.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni:v1.22.4-eksbuild.3,<account-id>.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-network-policy-agent:v1.4.0-eksbuild.1
+kube-system	DaemonSet	eks-pod-identity-agent	<account-id>.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:v0.1.37
+kube-system	DaemonSet	kube-proxy	<account-id>.dkr.ecr.us-east-1.amazonaws.com/eks/kube-proxy:v1.35.3-eksbuild.21
+monitoring	DaemonSet	kube-prometheus-stack-prometheus-node-exporter	quay.io/prometheus/node-exporter:v1.12.1-distroless
+
+
+# Baseline workload health
+2026-09-08T15:50:48Z
+NAMESPACE     NAME                                                       READY   UP-TO-DATE   AVAILABLE   AGE
+default       deployment.apps/http-demo                                  2/2     2            2           24m
+kube-system   deployment.apps/aws-load-balancer-controller               2/2     2            2           31m
+kube-system   deployment.apps/coredns                                    2/2     2            2           70m
+monitoring    deployment.apps/kube-prometheus-stack-grafana              1/1     1            1           30m
+monitoring    deployment.apps/kube-prometheus-stack-kube-state-metrics   1/1     1            1           30m
+monitoring    deployment.apps/kube-prometheus-stack-operator             1/1     1            1           30m
+
+NAMESPACE    NAME                                                           READY   AGE
+monitoring   statefulset.apps/prometheus-kube-prometheus-stack-prometheus   1/1     30m
+
+NAMESPACE     NAME                                                            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+kube-system   daemonset.apps/aws-node                                         4         4         4       4            4           <none>                   72m
+kube-system   daemonset.apps/eks-pod-identity-agent                           4         4         4       4            4           <none>                   72m
+kube-system   daemonset.apps/kube-proxy                                       4         4         4       4            4           <none>                   70m
+monitoring    daemonset.apps/kube-prometheus-stack-prometheus-node-exporter   4         4         4       4            4           kubernetes.io/os=linux   30m
+NAMESPACE     NAME                                                        READY   STATUS    RESTARTS   AGE   IP            NODE                          NOMINATED NODE   READINESS GATES
+default       http-demo-75ccdcd48f-h8cqp                                  1/1     Running   0          24m   ip-alias-10     apps-before-1    <none>           <none>
+default       http-demo-75ccdcd48f-mz88h                                  1/1     Running   0          24m   ip-alias-11     apps-before-2    <none>           <none>
+kube-system   aws-load-balancer-controller-5698d6c4b8-dfn5c               1/1     Running   0          31m   ip-alias-12     apps-before-2    <none>           <none>
+kube-system   aws-load-balancer-controller-5698d6c4b8-s2cdc               1/1     Running   0          31m   ip-alias-13    apps-before-1    <none>           <none>
+kube-system   aws-node-9tgh2                                              2/2     Running   0          71m   ip-alias-14    apps-before-1    <none>           <none>
+kube-system   aws-node-b7n6t                                              2/2     Running   0          71m   ip-alias-15    apps-before-2    <none>           <none>
+kube-system   aws-node-qd46x                                              2/2     Running   0          71m   ip-alias-16   system-before-1   <none>           <none>
+kube-system   aws-node-t4cm2                                              2/2     Running   0          71m   ip-alias-17    canary-before-1    <none>           <none>
+kube-system   coredns-9f58dc946-h2xtv                                     1/1     Running   0          70m   ip-alias-3   system-before-1   <none>           <none>
+kube-system   coredns-9f58dc946-nxwm4                                     1/1     Running   0          70m   ip-alias-4   system-before-1   <none>           <none>
+kube-system   eks-pod-identity-agent-6zsqw                                1/1     Running   0          71m   ip-alias-14    apps-before-1    <none>           <none>
+kube-system   eks-pod-identity-agent-bmk6c                                1/1     Running   0          71m   ip-alias-15    apps-before-2    <none>           <none>
+kube-system   eks-pod-identity-agent-lvjf5                                1/1     Running   0          71m   ip-alias-17    canary-before-1    <none>           <none>
+kube-system   eks-pod-identity-agent-mfjkk                                1/1     Running   0          71m   ip-alias-16   system-before-1   <none>           <none>
+kube-system   kube-proxy-58hcl                                            1/1     Running   0          70m   ip-alias-14    apps-before-1    <none>           <none>
+kube-system   kube-proxy-6fjd4                                            1/1     Running   0          70m   ip-alias-15    apps-before-2    <none>           <none>
+kube-system   kube-proxy-9wmzl                                            1/1     Running   0          70m   ip-alias-17    canary-before-1    <none>           <none>
+kube-system   kube-proxy-jm8ms                                            1/1     Running   0          70m   ip-alias-16   system-before-1   <none>           <none>
+monitoring    kube-prometheus-stack-grafana-5cd4986778-4ltrq              3/3     Running   0          30m   ip-alias-18    apps-before-1    <none>           <none>
+monitoring    kube-prometheus-stack-kube-state-metrics-7bb8776849-xbdhm   1/1     Running   0          30m   ip-alias-19   apps-before-1    <none>           <none>
+monitoring    kube-prometheus-stack-operator-7fd66ffc65-tb8wn             1/1     Running   0          30m   ip-alias-20    apps-before-2    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-8s4dn        1/1     Running   0          30m   ip-alias-14    apps-before-1    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-d8jw2        1/1     Running   0          30m   ip-alias-17    canary-before-1    <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-kjqsn        1/1     Running   0          30m   ip-alias-16   system-before-1   <none>           <none>
+monitoring    kube-prometheus-stack-prometheus-node-exporter-v7sr8        1/1     Running   0          30m   ip-alias-15    apps-before-2    <none>           <none>
+monitoring    prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          30m   ip-alias-21   apps-before-2    <none>           <none>
+NAMESPACE     NAME        MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+default       http-demo   1               N/A               1                     24m
+kube-system   coredns     N/A             1                 1                     70m
+NAME                         READY   STATUS    RESTARTS   AGE   IP          NODE                         NOMINATED NODE   READINESS GATES
+http-demo-75ccdcd48f-h8cqp   1/1     Running   0          24m   ip-alias-10   apps-before-1   <none>           <none>
+http-demo-75ccdcd48f-mz88h   1/1     Running   0          24m   ip-alias-11   apps-before-2   <none>           <none>
+
+
+# Baseline application PDB
+{
+  "spec": {
+    "minAvailable": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "http-demo"
+      }
+    }
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-09-08T15:25:53Z",
+        "message": "",
+        "observedGeneration": 1,
+        "reason": "SufficientPods",
+        "status": "True",
+        "type": "DisruptionAllowed"
+      }
+    ],
+    "currentHealthy": 2,
+    "desiredHealthy": 1,
+    "disruptionsAllowed": 1,
+    "expectedPods": 2,
+    "observedGeneration": 1
+  }
+}
+
+# Regional Standard On-Demand vCPU quota
+{
+  "QuotaName": "Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances",
+  "Unit": "None",
+  "Value": 256.0
+}
+[
+  {
+    "AvailabilityZone": "us-east-1c",
+    "AvailableIpAddressCount": 4058,
+    "State": "available"
+  }
+]
+[
+  {
+    "AvailabilityZone": "us-east-1b",
+    "AvailableIpAddressCount": 4090,
+    "State": "available"
+  }
+]
+[
+  {
+    "AvailabilityZone": "us-east-1a",
+    "AvailableIpAddressCount": 4071,
+    "State": "available"
+  }
+]
+
+# Terraform workspace
+default
+
+# Saved baseline plan exit code
+0
+
+# Saved final plan exit code
+0
+
+
+# SHA-256 of original private source captures (not of sanitized copies)
+c4ef431cce87b22a7fd7c6691ce511caebe9460be491a7340adf122b3bb525cc  workload-health.txt
+9ad8ba98e933e05cbc04a07333eb6b0ca1831b3d9567811290b1bb590e8d6bcd  prometheus-results.txt
+1682d8f4069bf1afd11ca2a10ee39284c68c35e0dc062ab0180a97e777a287df  rescheduling.txt
+4269c4e4671de2a51bf21c5a9db59d02448d61c663f847277451a5f379c90dc3  before-nodes.json
+d6dcc2c241414507f50a2612b76f6172b4c7db12869e5760eaabeb4909deee60  after-nodes.json
+0f22a50a6e0a7d67878e8e1c25adbcdbe0b63b29c258d697d9b031192dcf15d4  apps-events-detailed.json
+1eed6d3798afd97f6e0125572d41b9321e01c950e3bc67e8b0e942bb372869d5  apps-load-balancer-controller.txt
+14d1086bcf3cf7180e95065c45697ea23d74d746ef8205d9033c7a807838f7cb  timeline.txt
+3d581e4bd8bd240a8698e81171655a209a898d79ea7520500e88b6aacdb1a88f  final-plan.txt
+1a3ca5065e0f7aaa756d0a82dc19ad117d97f7ce795e320ce8026389ed3b637c  route-cleanup.txt

@@ -1,0 +1,17 @@
+2026-09-08T21:23:12Z Pre-drain baseline started
+2026-09-08T21:30:55Z Drain started: node-2
+2026-09-08T21:31:03Z Drain exited with code 0
+2026-09-08T21:32:24Z Post-drain recovery started
+2026-09-08T21:40:19Z Remediation measurement completed
+
+node/node-2 cordoned
+Warning: ignoring DaemonSet-managed Pods: kube-system/aws-node-v5ccm, kube-system/eks-pod-identity-agent-4hwb4, kube-system/kube-proxy-vmkkx, monitoring/kube-prometheus-stack-prometheus-node-exporter-vbb28
+evicting pod monitoring/kube-prometheus-stack-operator-7fd66ffc65-whm9t
+evicting pod default/http-demo-6d655b5f68-jnctp
+evicting pod kube-system/aws-load-balancer-controller-5698d6c4b8-blrff
+evicting pod monitoring/kube-prometheus-stack-grafana-5bf4b66dd4-hgxzr
+pod/kube-prometheus-stack-operator-7fd66ffc65-whm9t evicted
+pod/aws-load-balancer-controller-5698d6c4b8-blrff evicted
+pod/kube-prometheus-stack-grafana-5bf4b66dd4-hgxzr evicted
+pod/http-demo-6d655b5f68-jnctp evicted
+node/node-2 drained

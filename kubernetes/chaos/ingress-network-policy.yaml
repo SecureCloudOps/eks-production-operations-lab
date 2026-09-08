@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: web-same-namespace-only
+  namespace: lab05
+spec:
+  podSelector:
+    matchLabels:
+      app: lab05-web
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: lab05
+      ports:
+        - protocol: TCP
+          port: 3000
+  # INTENTIONAL BUG: no allowance for kube-system or ALB source addresses.
+  # The controller runs in kube-system, but ALB data traffic does NOT originate
+  # from controller pods. Namespace access and ALB access are separate paths.
