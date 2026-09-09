@@ -1,0 +1,288 @@
+{
+  "role": "arn:aws:iam::account-1:role/lab04-role",
+  "trust": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Federated": "arn:aws:iam::account-1:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/oidc-provider-1"
+        },
+        "Action": "sts:AssumeRoleWithWebIdentity",
+        "Condition": {
+          "StringEquals": {
+            "oidc.eks.us-east-1.amazonaws.com/id/oidc-provider-1:aud": "sts.amazonaws.com",
+            "oidc.eks.us-east-1.amazonaws.com/id/oidc-provider-1:sub": "system:serviceaccount:lab04:public-web"
+          }
+        }
+      }
+    ]
+  },
+  "initial_pod": {
+    "name": "public-web-69cc87cfbb-mnvrd",
+    "uid": "9a790417-2205-44a8-9c01-f0f93b28d6bf",
+    "node": "apps-node-a",
+    "serviceAccount": "public-web",
+    "containers": [
+      {
+        "name": "web",
+        "image": "hashicorp/http-echo:1.0.0",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          },
+          "readOnlyRootFilesystem": true,
+          "runAsNonRoot": true,
+          "runAsUser": 10001
+        },
+        "environment": [
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      },
+      {
+        "name": "aws-tools",
+        "image": "public.ecr.aws/aws-cli/aws-cli:2.27.49",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          }
+        },
+        "environment": [
+          {
+            "name": "AWS_EC2_METADATA_DISABLED",
+            "value": "true"
+          },
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      }
+    ]
+  },
+  "tested_pod": {
+    "name": "public-web-646f944f68-c4wdq",
+    "uid": "a311d6b1-ff0e-40e8-8d78-15b0fe9aff75",
+    "node": "apps-node-a",
+    "serviceAccount": "public-web",
+    "containers": [
+      {
+        "name": "web",
+        "image": "hashicorp/http-echo:1.0.0",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          },
+          "readOnlyRootFilesystem": true,
+          "runAsNonRoot": true,
+          "runAsUser": 10001
+        },
+        "environment": [
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      },
+      {
+        "name": "aws-tools",
+        "image": "public.ecr.aws/aws-cli/aws-cli:2.27.49",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          }
+        },
+        "environment": [
+          {
+            "name": "HOME",
+            "value": "/tmp"
+          },
+          {
+            "name": "AWS_EC2_METADATA_DISABLED",
+            "value": "true"
+          },
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      }
+    ]
+  },
+  "post_remediation_pod": {
+    "name": "public-web-646f944f68-c4wdq",
+    "uid": "a311d6b1-ff0e-40e8-8d78-15b0fe9aff75",
+    "node": "apps-node-a",
+    "serviceAccount": "public-web",
+    "containers": [
+      {
+        "name": "web",
+        "image": "hashicorp/http-echo:1.0.0",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          },
+          "readOnlyRootFilesystem": true,
+          "runAsNonRoot": true,
+          "runAsUser": 10001
+        },
+        "environment": [
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      },
+      {
+        "name": "aws-tools",
+        "image": "public.ecr.aws/aws-cli/aws-cli:2.27.49",
+        "securityContext": {
+          "allowPrivilegeEscalation": false,
+          "capabilities": {
+            "drop": [
+              "ALL"
+            ]
+          }
+        },
+        "environment": [
+          {
+            "name": "HOME",
+            "value": "/tmp"
+          },
+          {
+            "name": "AWS_EC2_METADATA_DISABLED",
+            "value": "true"
+          },
+          {
+            "name": "AWS_STS_REGIONAL_ENDPOINTS",
+            "value": "regional"
+          },
+          {
+            "name": "AWS_DEFAULT_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          },
+          {
+            "name": "AWS_ROLE_ARN",
+            "value": "arn:aws:iam::account-1:role/lab04-role"
+          },
+          {
+            "name": "AWS_WEB_IDENTITY_TOKEN_FILE",
+            "value": "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+          }
+        ]
+      }
+    ]
+  },
+  "identity_before": {
+    "UserId": "role-id-01:public-web-646f944f68-c4wdq",
+    "Account": "account-1",
+    "Arn": "arn:aws:sts::account-1:assumed-role/lab04-role/public-web-646f944f68-c4wdq"
+  },
+  "identity_after": {
+    "UserId": "role-id-01:public-web-646f944f68-c4wdq",
+    "Account": "account-1",
+    "Arn": "arn:aws:sts::account-1:assumed-role/lab04-role/public-web-646f944f68-c4wdq"
+  }
+}

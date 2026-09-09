@@ -1,0 +1,108 @@
+--- http-before-result.txt ---
+HTTP status: 200
+
+--- http-before-body.txt ---
+Lab 04 public web demo
+
+--- public-before.json ---
+{
+    "AcceptRanges": "bytes",
+    "LastModified": "2026-09-08T23:18:14+00:00",
+    "ContentLength": 38,
+    "ETag": "\"fff739c3684924548eb8c0ca99dade06\"",
+    "ChecksumCRC32": "3HwS/Q==",
+    "ChecksumType": "FULL_OBJECT",
+    "ContentType": "application/octet-stream",
+    "ServerSideEncryption": "AES256",
+    "Metadata": {},
+    "TagCount": 4
+}
+
+--- private-list-before.json ---
+{
+    "Contents": [
+        {
+            "Key": "private/customer-demo.txt",
+            "LastModified": "2026-09-08T23:18:14+00:00",
+            "ETag": "\"8c4d123ca086de7b571a7abb28132cf3\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 43,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "private/"
+}
+
+--- private-get-before.json ---
+{
+    "AcceptRanges": "bytes",
+    "LastModified": "2026-09-08T23:18:14+00:00",
+    "ContentLength": 43,
+    "ETag": "\"8c4d123ca086de7b571a7abb28132cf3\"",
+    "ChecksumCRC32": "1oT9Gg==",
+    "ChecksumType": "FULL_OBJECT",
+    "ContentType": "application/octet-stream",
+    "ServerSideEncryption": "AES256",
+    "Metadata": {},
+    "TagCount": 4
+}
+
+--- synthetic-copy.txt ---
+SYNTHETIC ONLY: customer=demo, record=123.
+
+--- public-list-after.json ---
+{
+    "Contents": [
+        {
+            "Key": "public/hello.txt",
+            "LastModified": "2026-09-08T23:18:14+00:00",
+            "ETag": "\"fff739c3684924548eb8c0ca99dade06\"",
+            "ChecksumAlgorithm": [
+                "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 38,
+            "StorageClass": "STANDARD"
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "public/"
+}
+
+--- public-get-after.json ---
+{
+    "AcceptRanges": "bytes",
+    "LastModified": "2026-09-08T23:18:14+00:00",
+    "ContentLength": 38,
+    "ETag": "\"fff739c3684924548eb8c0ca99dade06\"",
+    "ChecksumCRC32": "3HwS/Q==",
+    "ChecksumType": "FULL_OBJECT",
+    "ContentType": "application/octet-stream",
+    "ServerSideEncryption": "AES256",
+    "Metadata": {}
+}
+
+--- private-list-after.txt ---
+
+An error occurred (AccessDenied) when calling the ListObjectsV2 operation: User: arn:aws:sts::account-1:assumed-role/lab04-role/public-web-646f944f68-c4wdq is not authorized to perform: s3:ListBucket on resource: "arn:aws:s3:::lab04-fixture-bucket" because no identity-based policy allows the s3:ListBucket action
+command terminated with exit code 254
+
+exit_code=254
+
+--- private-get-after.txt ---
+
+An error occurred (AccessDenied) when calling the GetObject operation: User: arn:aws:sts::account-1:assumed-role/lab04-role/public-web-646f944f68-c4wdq is not authorized to perform: s3:GetObject on resource: "arn:aws:s3:::lab04-fixture-bucket/private/customer-demo.txt" because no identity-based policy allows the s3:GetObject action
+command terminated with exit code 254
+
+exit_code=254
+
+--- write-after.txt ---
+
+An error occurred (AccessDenied) when calling the PutObject operation: User: arn:aws:sts::account-1:assumed-role/lab04-role/public-web-646f944f68-c4wdq is not authorized to perform: s3:PutObject on resource: "arn:aws:s3:::lab04-fixture-bucket/public/should-be-denied.txt" because no identity-based policy allows the s3:PutObject action
+command terminated with exit code 254
+
+exit_code=254

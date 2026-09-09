@@ -294,7 +294,7 @@ LAB04_HOST=$(kubectl -n lab04 get service public-web -o jsonpath='{.status.loadB
 test -n "$LAB04_HOST" && curl --fail "http://$LAB04_HOST/"
 POD=$(kubectl -n lab04 get pods -l app=lab04-public-web -o jsonpath='{.items[0].metadata.name}')
 aws_pod() {
-  kubectl -n lab04 exec "$POD" -c aws-tools -- env AWS_ROLE_SESSION_NAME="$POD" aws "$@"
+  kubectl -n lab04 exec "$POD" -c aws-tools -- env HOME=/tmp AWS_ROLE_SESSION_NAME="$POD" aws "$@"
 }
 kubectl -n lab04 get pod "$POD" -o json | jq '{name:.metadata.name,uid:.metadata.uid,
   node:.spec.nodeName,serviceAccount:.spec.serviceAccountName,
@@ -319,8 +319,14 @@ wait_cloudtrail public-read --arg session "$(jq -r .Arn "$RAW/assumed-identity.j
 ```
 
 Verify the caller is an assumed session of the Terraform lab role, not the node
-role. The CLI sidecar disables EC2 metadata fallback. If the Service remains
-Pending, inspect `kubectl -n lab04 describe service public-web` and controller
+role. The CLI sidecar disables EC2 metadata fallback and uses `HOME=/tmp` for
+writable AWS CLI configuration/cache paths. The pinned image can fail with
+`Permission denied: '/root/.aws'` when all Linux capabilities are dropped.
+Keep the capability restrictions; use the configured writable home rather than
+loosening container security. This filesystem error does not establish an IAM
+denial. Never print the contents of credential or token files while diagnosing it.
+
+If the Service remains Pending, inspect `kubectl -n lab04 describe service public-web` and controller
 events/logs. IRSA failures need checking of the annotation, trust conditions,
 OIDC provider, new-pod injection, and STS connectivity.
 
@@ -566,7 +572,8 @@ aws cloudtrail delete-trail --name "$LAB04_TRAIL"
 aws s3 cp "s3://$LAB04_LOG_BUCKET/" "$RAW/audit-archive/" --recursive
 # Stop here until the archive is copied to protected storage and verified readable.
 # This lab did not enable versioning; refuse this cleanup if that has changed.
-aws s3api get-bucket-versioning --bucket "$LAB04_LOG_BUCKET" > "$RAW/log-bucket-versioning.json"
+aws s3api get-bucket-versioning --bucket "$LAB04_LOG_BUCKET" \
+  --query '{Status:Status,MFADelete:MFADelete}' --output json > "$RAW/log-bucket-versioning.json"
 jq -e '.Status == null' "$RAW/log-bucket-versioning.json"
 aws s3 rm "s3://$LAB04_LOG_BUCKET/" --recursive
 aws s3api delete-bucket --bucket "$LAB04_LOG_BUCKET"
@@ -579,3 +586,10 @@ trail/bucket only after confirming absence in the correct account/region; do not
 hide AccessDenied or other errors. Do not force-remove Object Lock or retention.
 Verify no dedicated trail, log bucket, NLB or Terraform Lab 04 resources remain;
 record any intentionally retained audit archive separately.
+
+For archive verification, preserve the S3 inventory alongside the downloaded
+files. Zero-byte keys ending in `/` are folder markers and may be represented
+locally as directories; verify their inventory entries separately from log-file
+sizes and hashes. The explicit versioning query above produces JSON fields even
+when S3 returns an empty versioning configuration. An empty CLI output file must
+not be interpreted as a verified versioning state.

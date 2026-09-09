@@ -54,6 +54,9 @@ spec:
           command: ["/bin/sh", "-c"]
           args: ["while true; do sleep 3600; done"]
           env:
+            # Keep AWS CLI configuration/cache paths writable with capabilities dropped.
+            - name: HOME
+              value: /tmp
             - name: AWS_EC2_METADATA_DISABLED
               value: "true"
           resources:

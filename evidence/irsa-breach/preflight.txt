@@ -1,0 +1,14 @@
+2026-09-08T23:06:32Z
+RAW=<private-run-directory>
+eks-operations-lab
+default
+us-east-1
+NAME                          STATUS   ROLES    AGE     VERSION
+apps-node-a   Ready    <none>   109m    v1.36.1-eks-a3a0722
+system-node   Ready    <none>   3h15m   v1.36.1-eks-a3a0722
+apps-node-b   Ready    <none>   3h47m   v1.36.1-eks-a3a0722
+canary-node     Ready    <none>   4h10m   v1.36.1-eks-a3a0722
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+aws-load-balancer-controller   2/2     2            2           7h46m
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+http-demo   2/2     2            2           7h40m

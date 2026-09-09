@@ -1,0 +1,121 @@
+{
+  "trail": {
+    "Name": "lab04-trail",
+    "S3BucketName": "lab04-audit-bucket",
+    "S3KeyPrefix": "lab04",
+    "IncludeGlobalServiceEvents": false,
+    "IsMultiRegionTrail": false,
+    "TrailARN": "arn:aws:cloudtrail:us-east-1:account-1:trail/lab04-trail",
+    "LogFileValidationEnabled": true,
+    "IsOrganizationTrail": false
+  },
+  "initial_status": {
+    "IsLogging": true,
+    "StartLoggingTime": "2026-09-08T19:22:20.824000-04:00",
+    "LatestDeliveryAttemptTime": "",
+    "LatestNotificationAttemptTime": "",
+    "LatestNotificationAttemptSucceeded": "",
+    "LatestDeliveryAttemptSucceeded": "",
+    "TimeLoggingStarted": "2026-09-08T23:22:20Z",
+    "TimeLoggingStopped": ""
+  },
+  "selectors": {
+    "TrailARN": "arn:aws:cloudtrail:us-east-1:account-1:trail/lab04-trail",
+    "EventSelectors": [
+      {
+        "ReadWriteType": "All",
+        "IncludeManagementEvents": true,
+        "DataResources": [
+          {
+            "Type": "AWS::S3::Object",
+            "Values": [
+              "arn:aws:s3:::lab04-fixture-bucket/"
+            ]
+          }
+        ],
+        "ExcludeManagementEventSources": []
+      }
+    ]
+  },
+  "log_bucket_policy": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "TrailAclCheck",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "cloudtrail.amazonaws.com"
+        },
+        "Action": "s3:GetBucketAcl",
+        "Resource": "arn:aws:s3:::lab04-audit-bucket",
+        "Condition": {
+          "StringEquals": {
+            "aws:SourceArn": "arn:aws:cloudtrail:us-east-1:account-1:trail/lab04-trail"
+          }
+        }
+      },
+      {
+        "Sid": "TrailDelivery",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "cloudtrail.amazonaws.com"
+        },
+        "Action": "s3:PutObject",
+        "Resource": "arn:aws:s3:::lab04-audit-bucket/lab04/AWSLogs/account-1/*",
+        "Condition": {
+          "StringEquals": {
+            "aws:SourceArn": "arn:aws:cloudtrail:us-east-1:account-1:trail/lab04-trail",
+            "s3:x-amz-acl": "bucket-owner-full-control"
+          }
+        }
+      }
+    ]
+  },
+  "public_access_block": {
+    "PublicAccessBlockConfiguration": {
+      "BlockPublicAcls": true,
+      "IgnorePublicAcls": true,
+      "BlockPublicPolicy": true,
+      "RestrictPublicBuckets": true
+    }
+  },
+  "encryption": {
+    "ServerSideEncryptionConfiguration": {
+      "Rules": [
+        {
+          "ApplyServerSideEncryptionByDefault": {
+            "SSEAlgorithm": "AES256"
+          },
+          "BucketKeyEnabled": false,
+          "BlockedEncryptionTypes": {
+            "EncryptionType": [
+              "SSE-C"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "ownership": {
+    "OwnershipControls": {
+      "Rules": [
+        {
+          "ObjectOwnership": "BucketOwnerEnforced"
+        }
+      ]
+    }
+  },
+  "stopped_status": {
+    "IsLogging": false,
+    "LatestDeliveryTime": "2026-09-08T22:32:17.476000-04:00",
+    "StartLoggingTime": "2026-09-08T19:22:20.824000-04:00",
+    "StopLoggingTime": "2026-09-08T22:32:45.226000-04:00",
+    "LatestDigestDeliveryTime": "2026-09-08T21:38:27.725000-04:00",
+    "LatestDeliveryAttemptTime": "2026-09-09T02:32:17Z",
+    "LatestNotificationAttemptTime": "",
+    "LatestNotificationAttemptSucceeded": "",
+    "LatestDeliveryAttemptSucceeded": "2026-09-09T02:32:17Z",
+    "TimeLoggingStarted": "2026-09-08T23:22:20Z",
+    "TimeLoggingStopped": "2026-09-09T02:32:45Z"
+  }
+}

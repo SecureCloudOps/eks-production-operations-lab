@@ -1,0 +1,20 @@
+2026-09-09T02:44:36Z
+Lab 4 namespace absent
+NAME                          STATUS   ROLES    AGE     VERSION
+apps-node-a   Ready    <none>   5h27m   v1.36.1-eks-a3a0722
+system-node   Ready    <none>   6h53m   v1.36.1-eks-a3a0722
+apps-node-b   Ready    <none>   7h25m   v1.36.1-eks-a3a0722
+canary-node     Ready    <none>   7h48m   v1.36.1-eks-a3a0722
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+http-demo   2/2     2            2           11h
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+aws-load-balancer-controller   2/2     2            2           11h
+NAME                                                        READY   STATUS    RESTARTS   AGE
+kube-prometheus-stack-grafana-5bf4b66dd4-mhn2l              3/3     Running   0          5h13m
+kube-prometheus-stack-kube-state-metrics-7bb8776849-85ddp   1/1     Running   0          7h19m
+kube-prometheus-stack-operator-7fd66ffc65-sjt6v             1/1     Running   0          5h13m
+kube-prometheus-stack-prometheus-node-exporter-jn2vl        1/1     Running   0          6h53m
+kube-prometheus-stack-prometheus-node-exporter-ndzmg        1/1     Running   0          7h48m
+kube-prometheus-stack-prometheus-node-exporter-q9lcz        1/1     Running   0          7h25m
+kube-prometheus-stack-prometheus-node-exporter-wqm8k        1/1     Running   0          5h27m
+prometheus-kube-prometheus-stack-prometheus-0               2/2     Running   0          7h11m

@@ -1,0 +1,16 @@
+{
+  "remaining_nlb": 0,
+  "remaining_recorded_target_groups": 0,
+  "remaining_recorded_security_groups": 0,
+  "remaining_nlb_enis": 0,
+  "recorded_trail_absent": true,
+  "log_bucket_versioning": {
+    "Status": null,
+    "MFADelete": null
+  },
+  "log_bucket_objects_before_deletion": 0,
+  "log_bucket_head_after": "An error occurred (404) when calling the HeadBucket operation: Not Found",
+  "encrypted_archive_verified_at": "2026-09-09T02:36:00Z",
+  "archive_files": 292,
+  "archived_s3_objects": 173
+}

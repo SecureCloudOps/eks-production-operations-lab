@@ -1,0 +1,131 @@
+{
+  "setup": {
+    "resource_actions": [
+      {
+        "address": "aws_iam_role.lab04[0]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_iam_role_policy.lab04_s3[0]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket.lab04[0]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket_public_access_block.lab04[0]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket_server_side_encryption_configuration.lab04[0]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_s3_object.lab04[\"private/customer-demo.txt\"]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "aws_s3_object.lab04[\"public/hello.txt\"]",
+        "actions": [
+          "create"
+        ]
+      },
+      {
+        "address": "module.eks.aws_iam_openid_connect_provider.oidc_provider[0]",
+        "actions": [
+          "create"
+        ]
+      }
+    ],
+    "apply_summary": [
+      "Apply complete! Resources: 8 added, 0 changed, 0 destroyed."
+    ]
+  },
+  "remediation": {
+    "resource_actions": [
+      {
+        "address": "aws_iam_role_policy.lab04_s3[0]",
+        "actions": [
+          "update"
+        ]
+      }
+    ],
+    "apply_summary": [
+      "Apply complete! Resources: 0 added, 1 changed, 0 destroyed."
+    ]
+  },
+  "cleanup": {
+    "resource_actions": [
+      {
+        "address": "aws_iam_role.lab04[0]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_iam_role_policy.lab04_s3[0]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket.lab04[0]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket_public_access_block.lab04[0]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_s3_bucket_server_side_encryption_configuration.lab04[0]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_s3_object.lab04[\"private/customer-demo.txt\"]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "aws_s3_object.lab04[\"public/hello.txt\"]",
+        "actions": [
+          "delete"
+        ]
+      },
+      {
+        "address": "module.eks.aws_iam_openid_connect_provider.oidc_provider[0]",
+        "actions": [
+          "delete"
+        ]
+      }
+    ],
+    "apply_summary": [
+      "Apply complete! Resources: 0 added, 0 changed, 8 destroyed."
+    ]
+  },
+  "final": {
+    "result": "final_plan_exit_code=0",
+    "summary": [
+      "No changes. Your infrastructure matches the configuration."
+    ]
+  }
+}
