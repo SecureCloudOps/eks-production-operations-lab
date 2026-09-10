@@ -1,5 +1,10 @@
 # EKS production operations lab
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Validate](https://github.com/SecureCloudOps/eks-production-operations-lab/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/SecureCloudOps/eks-production-operations-lab/actions/workflows/validate.yml)
+[![Terraform CI 1.14.3](https://img.shields.io/badge/Terraform_CI-1.14.3-844FBA?logo=terraform&logoColor=white)](.github/workflows/validate.yml)
+[![EKS tested 1.36](https://img.shields.io/badge/EKS_tested-1.36-326CE5?logo=kubernetes&logoColor=white)](evidence/ingress-outage/final-health.json)
+
 Five hands-on incident exercises on AWS EKS: staged upgrades, blocked drains,
 OOM triage, workload IAM remediation, and ingress failures. Each exercise follows
 the same discipline: establish a baseline, introduce a bounded fault, collect
@@ -175,6 +180,8 @@ does not perform the prerequisite Kubernetes or namespace cleanup for you.
 | [docs/](docs/) | Access, controller/CNI setup, architecture rationale and teardown |
 | [scripts/](scripts/) | Validation, observation and load-balancer cleanup checks |
 
-No license has been selected for redistribution. Third-party dependencies retain
-their own licenses; version/source references are in the Terraform files, lockfile,
-chart declarations and linked upstream documentation.
+## License
+
+Licensed under the [MIT License](LICENSE). The adapted AWS Load Balancer Controller
+IAM policy retains its applicable Apache-2.0 terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
+Downloaded dependencies retain their respective licenses.

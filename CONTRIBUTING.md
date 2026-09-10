@@ -55,5 +55,6 @@ Describe the concrete problem, resulting behavior, checks actually run and any
 remaining execution limits. Link the relevant lab or evidence summary. Keep raw
 outputs and private infrastructure identifiers out of descriptions and issues.
 
-No redistribution license has been selected. Resolve licensing and third-party
-attribution before presenting the project as open source.
+The repository uses the [MIT License](LICENSE). Preserve applicable upstream
+licenses and attribution when adapting third-party material; see
+[third-party notices](THIRD_PARTY_NOTICES.md).
