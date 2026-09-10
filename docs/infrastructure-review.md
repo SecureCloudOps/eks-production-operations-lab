@@ -1,5 +1,9 @@
 # Infrastructure review — 2026-09-07
 
+Historical preparation review, retained for design rationale. Statements about
+missing state or unexecuted operations describe this review date; see the later
+[execution evidence](../evidence/README.md) for deployed observations and results.
+
 Scope: all root Terraform files and the controller IAM template, Kubernetes
 manifests, five lab guides, Makefile, scripts, and supporting documentation.
 This is a configuration review, not an inventory of deployed AWS resources.

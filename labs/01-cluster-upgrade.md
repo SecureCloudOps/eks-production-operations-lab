@@ -41,7 +41,7 @@ Preparing this lab does not require creating AWS resources or running apply.
 Use Bash for all shell blocks, from the repository root. Install AWS CLI v2,
 Terraform, kubectl compatible with both cluster versions, Helm, jq, curl,
 Python 3, and [kubent](https://github.com/doitintl/kube-no-trouble#install).
-Follow the [identity and endpoint instructions](../README.md) first. Preserve
+Follow the [identity and endpoint instructions](../docs/access.md) first. Preserve
 local Terraform state and inputs as described there before and after any apply.
 The operator needs Kubernetes inspection permissions (including Helm release
 Secrets for kubent), EKS describe/list/update permissions, and EC2

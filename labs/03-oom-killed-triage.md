@@ -29,7 +29,7 @@ patterns without deliberately exhausting a whole node.
 ## 1. Prepare access and monitoring
 
 Use a disposable lab cluster, Bash, kubectl, jq, and curl. Follow the
-[repository access instructions](../README.md). The operator needs permission
+[repository access instructions](../docs/access.md). The operator needs permission
 to create/delete these lab resources, read nodes/pods/events/logs across namespaces,
 and port-forward the Prometheus Service. This lab uses Prometheus and Kubernetes
 status directly; neither `kubectl top` nor Metrics Server is required.

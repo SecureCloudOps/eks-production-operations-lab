@@ -3,9 +3,16 @@
 Run from the repository root. No apply is part of this workflow. Avoid `make up`
 and `make down`, which apply and destroy infrastructure respectively.
 
+This page combines reusable preparation steps with dated setup records. The
+[execution evidence index](../evidence/README.md) contains the later lab results,
+including the completed 1.36 upgrade and final clean plan. Historical example
+plans below are not plans for the currently deployed environment.
+
 1. Select your intended AWS profile and privately verify its account and role.
    Keep AWS CLI v2 and the provider on the same identity (see the root README).
-2. Copy `terraform/terraform.tfvars.sample` to `terraform/terraform.tfvars`.
+2. For a new environment only, copy `terraform/terraform.tfvars.sample` to
+   `terraform/terraform.tfvars` if that private file does not already exist.
+   Never overwrite deployed-environment inputs with the sample.
    Replace the documentation-only operator CIDR with your VPN/VPC runner source.
    Confirm region, two or three account-available AZs, unique cluster name, Kubernetes
    version, non-overlapping /16 VPC CIDR, environment, and tags.
@@ -119,5 +126,6 @@ Review-sensitive proposed creates include cluster-creator administrative access,
 IAM roles/policies, KMS key/policy, network egress, the operator TCP 443 rule, and
 billable compute/networking. Public EKS access is disabled in the sample. Regional
 AZ/instance capacity, quotas, write permissions, actual operator connectivity and
-OCI chart delivery remain unverified. The current folder has no Git metadata,
-so no Git diff, commit, or tracked-file baseline was available.
+OCI chart delivery remained unverified in that preparation run. At that time,
+the folder had no Git metadata, so no Git diff, commit, or tracked-file baseline
+was available. Later execution evidence is linked at the top of this page.
