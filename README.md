@@ -158,12 +158,17 @@ operator workflow; shared operation would require a separate state design review
 
 ## Cleanup and current evidence boundary
 
-Lab cleanup retains the shared cluster, workers, HTTP demo, controller and
-monitoring. The final Lab 05 capture on September 9 recorded four Ready nodes,
+**The recorded AWS environment was torn down on September 10, 2026.**
+Terraform destroyed 79 managed resources; 41 independent cleanup checks passed,
+and the final destroy-mode plan was empty. See the [teardown report](evidence/teardown/summary.md)
+for scope, terminal tag records and verification limits.
+
+Individual lab cleanup retained the shared cluster, workers, HTTP demo, controller
+and monitoring until full teardown. The final Lab 05 capture on September 9 recorded four Ready nodes,
 apps min/max/desired 2/2/2, demo/controller 2/2, 25/25 Prometheus targets healthy,
 and a clean Terraform plan. This is a dated observation, not a live status badge.
 
-To stop the environment's ongoing charges, follow [full teardown](docs/teardown.md):
+For a new deployment, follow [full teardown](docs/teardown.md):
 remove Kubernetes entry points while controllers still work, verify AWS deletion,
 then perform the reviewed Terraform destroy and residual-resource checks.
 `make down` runs the read-only load-balancer gate before Terraform destroy; it

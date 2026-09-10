@@ -1,0 +1,233 @@
+{
+  "execution_date": "2026-09-10",
+  "terraform": {
+    "destroyed_managed_resources": 79,
+    "apply_exit": 0,
+    "post_attempt_backup_exit": 0,
+    "final_state_resource_blocks": 0,
+    "final_destroy_mode_plan_exit": 0,
+    "final_plan_actions": [],
+    "final_plan_drift": [],
+    "state_unchanged_during_verification": true
+  },
+  "aws_verification": {
+    "checks": [
+      {
+        "check": "eks-cluster",
+        "status": "pass"
+      },
+      {
+        "check": "vpc",
+        "status": "pass"
+      },
+      {
+        "check": "network-interfaces",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "security-groups",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "subnets",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "route-tables",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "network-acls",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "vpc-endpoints",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "internet-gateways",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "nat-gateways",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 1
+      },
+      {
+        "check": "instances",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "load-balancers",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "target-groups",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "classic-load-balancers",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "elastic-ip-1",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "launch-template-1",
+        "status": "pass"
+      },
+      {
+        "check": "launch-template-2",
+        "status": "pass"
+      },
+      {
+        "check": "launch-template-3",
+        "status": "pass"
+      },
+      {
+        "check": "autoscaling-groups",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "recorded-ebs-volumes",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "recorded-volume-snapshots",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "project-tagged-ebs-volumes",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "cluster-tagged-ebs-volumes",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "iam-role-1",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-2",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-3",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-4",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-5",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-6",
+        "status": "pass"
+      },
+      {
+        "check": "iam-role-7",
+        "status": "pass"
+      },
+      {
+        "check": "instance-profile-1",
+        "status": "pass"
+      },
+      {
+        "check": "instance-profile-2",
+        "status": "pass"
+      },
+      {
+        "check": "instance-profile-3",
+        "status": "pass"
+      },
+      {
+        "check": "lab04-oidc-provider-1",
+        "status": "pass"
+      },
+      {
+        "check": "cloudwatch-log-group-1",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 0
+      },
+      {
+        "check": "lab04-audit-trail",
+        "status": "pass"
+      },
+      {
+        "check": "lab04-bucket-1",
+        "status": "pass"
+      },
+      {
+        "check": "lab04-bucket-2",
+        "status": "pass"
+      },
+      {
+        "check": "project-tagged-resources",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 2
+      },
+      {
+        "check": "cluster-tagged-resources",
+        "status": "pass",
+        "remaining": 0,
+        "terminal_records": 4
+      },
+      {
+        "check": "terraform-state",
+        "status": "pass"
+      }
+    ],
+    "passed": 41,
+    "remaining_checks": 0,
+    "error_checks": 0,
+    "recorded_volumes_checked": 8,
+    "scope": "Recorded lab resources and regional project/cluster tag searches; unrelated account resources are outside this check."
+  },
+  "limitations": [
+    "Recorded lab resources and regional tag searches; not an account-wide audit.",
+    "Billing settlement was not verified.",
+    "Terminal records can remain visible after deletion; exact-ID service checks resolved the tag matches."
+  ]
+}

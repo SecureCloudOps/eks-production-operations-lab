@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-10",
+  "configuration_commit": "74170d80907ceabc1783d3fc4839a4f93bb73df5",
+  "apply_started_at": "2026-09-10T16:27:00Z",
+  "apply_finished_at": "2026-09-10T16:40:12Z",
+  "pre_teardown_backup_verified_at": "2026-09-10T16:20:21Z",
+  "post_teardown_backup_verified_at": "2026-09-10T16:46:14Z",
+  "source_sha256": {
+    "reviewed_destroy_plan_summary": "746a26ed1dbd8e12d4199784a6d984c29a20d3f94e4177dcc00b80aa6156a1c4",
+    "terraform_apply_log": "dfd1a194c6a0197be495949150f94c57387a5f4a3fcd79493f0ff384f45afdaa",
+    "apply_exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "post_attempt_backup_exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "initial_aws_verification": "596537417558575ead18bbde582c3b6af118d5b98c2ab20fb21ca3d636f8af35",
+    "final_aws_verification": "b8d469462877e71d72e416247853bdebd70283b499beef251f0883915e01447c",
+    "final_destroy_plan": "f08fbd851a643eb00644cd82107b6d73273d0a4430c780c88ea0e2a6406b3f58",
+    "state_unchanged_check": "fb52b3988d710aeeef540038b9a6e83f045083697ba37de73b6d96df62908af0",
+    "pre_teardown_backup_verification": "9fd9e1c06c3d657ec64dcc95b075839dca3cd124879990321569a512d475ef5f",
+    "post_teardown_backup_verification": "3196e612fb29dd3c1b10a9b8d56470a493a212d1ad99d123454e488a1edaf274",
+    "aws_verification_script": "54c0ad3351f939a4f9e7426761d09470e321bbd9faea63f49558783a7a990d2b"
+  },
+  "sanitization": "Selected counts, outcomes, resource categories and timestamps only. Raw AWS identifiers, addresses, state, plans, configuration and backup paths remain private. Source labels identify retained captures without exposing private paths.",
+  "limits": "Hashes correlate with private sources; they are not independent attestation. Earlier failed verification captures are preserved."
+}

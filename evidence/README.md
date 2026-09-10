@@ -1,6 +1,7 @@
 # Execution evidence
 
-These are observations from operator-executed EKS labs on September 8–9, 2026.
+These are observations from operator-executed EKS labs on September 8–9, 2026,
+and full environment teardown on September 10.
 Start with each summary for the claim, supporting captures and measurement limits.
 The successful recoveries do not erase the original failures.
 
@@ -13,6 +14,7 @@ The successful recoveries do not erase the original failures.
 | Container OOM | [OOM summary](oom-triage/summary.md) | [Termination metadata](oom-triage/oom-summary.json), [previous logs](oom-triage/previous-logs.txt), [provenance](oom-triage/provenance.json) |
 | IRSA overprivilege | [IAM summary](irsa-breach/summary.md) | [Access checks](irsa-breach/access-checks.txt), [CloudTrail events](irsa-breach/cloudtrail-after.jsonl), [provenance](irsa-breach/provenance.json) |
 | Ingress outage | [Ingress summary](ingress-outage/summary.md) | [Failure/recovery](ingress-outage/result.txt), [cleanup](ingress-outage/cleanup.txt), [final health](ingress-outage/final-health.json), [provenance](ingress-outage/provenance.json) |
+| Full teardown | [Teardown summary](teardown/summary.md) | [AWS/state verification](teardown/verification.json), [provenance](teardown/provenance.json) |
 
 ## How to interpret the captures
 

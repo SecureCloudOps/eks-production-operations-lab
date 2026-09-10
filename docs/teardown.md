@@ -20,7 +20,12 @@ terraform -chdir=terraform state list
 kubectl config current-context
 kubectl get nodes
 kubectl get ingress,service -A
-helm list -A --all
+# Helm 4 includes all statuses by default; Helm 3 requires --all.
+case "$(helm version --short)" in
+  v3.*) helm list -A --all ;;
+  v4.*) helm list -A ;;
+  *) echo 'Review list flags for this Helm version before continuing.'; exit 1 ;;
+esac
 kubectl get pvc -A
 kubectl get pv
 ```
@@ -107,7 +112,7 @@ controllers still run, and track retained volumes/snapshots for step 6.
 
 ## 4. Remove manual Helm resources and prepare Terraform-owned Helm cleanup
 
-Use `helm list -A --all` to include failed and pending releases. Uninstall only
+Use the version-aware Helm inventory in step 1 to include failed and pending releases. Uninstall only
 manually installed lab releases using their recorded name/namespace:
 
 ```sh
@@ -188,7 +193,10 @@ account/region, AWS console or service-specific list/describe APIs, check:
 | Manual extras | Any lab DNS records, alarms, VPN/access infrastructure or other prerequisites outside this root accounted for |
 
 Use service-specific inventories as well as tag searches; untagged and partially
-created resources can be missed by tag filters. Check VPC dependencies before
+created resources can be missed by tag filters. Tag results can also include terminated
+instances, deleted NAT gateways or stale references. Resolve each match by its
+recorded ID through the owning service API. Record confirmed terminal states or
+explicit not-found responses; permission errors and timeouts remain unresolved. Check VPC dependencies before
 manually deleting an orphan. Do not detach/delete requester-managed ENIs directly;
 remove the owning service and wait. Review cost reporting later for residual
 charges, allowing for billing delay. Pending deletion and retained resources
