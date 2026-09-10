@@ -109,7 +109,8 @@ make validate-schemas
 The schema target uses Kubernetes 1.35.0, matching the source fixture baseline.
 It does not certify full 1.36 compatibility, CRD behavior, IAM permissions or
 runtime availability. The [Validate workflow](.github/workflows/validate.yml)
-runs these checks in GitHub Actions; first remote CI execution is still pending.
+runs these checks in GitHub Actions. Check its run results separately; a local
+validation pass is not a claim that remote CI passed.
 
 `make help` lists operation targets. `make up`, `make deploy-apps` and the Lab
 02–04 triggers make changes; they are convenience commands, not substitutes for

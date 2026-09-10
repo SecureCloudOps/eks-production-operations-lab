@@ -34,6 +34,24 @@ plans below are not plans for the currently deployed environment.
    any later plan/state/log artifacts as sensitive. Account-specific tfvars,
    state, and plan files are ignored; retain the provider lock file in source control.
 
+## Cross-platform provider checksums
+
+The committed lockfile supports the Mac ARM64 operator and Linux AMD64 CI runner.
+When maintaining provider locks, use Terraform to record both platforms:
+
+```bash
+terraform -chdir=terraform providers lock \
+  -platform=darwin_arm64 \
+  -platform=linux_amd64
+```
+
+Review the publisher signatures and lockfile diff. Preserve selected versions
+unless an upgrade is intentional; never hand-write hashes. Keep CI initialization
+on `-lockfile=readonly`. The first Linux CI run downloaded signed packages but
+failed validation because the existing lockfile lacked Linux `h1` entries.
+Recording both platforms fixes that gap without disabling verification or changing
+infrastructure. See [Terraform provider locking](https://developer.hashicorp.com/terraform/cli/commands/providers/lock).
+
 ## Current preparation notes (2026-09-07)
 
 See [the infrastructure review](../docs/infrastructure-review.md). New defaults
