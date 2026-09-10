@@ -67,6 +67,12 @@ It cannot handle SIGKILL or a lost machine. Keep the evidence directory and
 rerun cleanup after restoring access if an API request fails. No other operator
 should create resources with these lab names during the run.
 
+During diagnosis, save the ALB ARN and every target group ARN, including any
+group replaced by the port fix. Capture ownership tags and associated security
+groups/ENIs before removing the Ingress. Distinguish the dedicated ALB security
+group from the controller's shared backend group. The trap below intentionally
+leaves the namespace for the final AWS verification and namespace cleanup.
+
 ```bash
 bash
 set -euo pipefail
@@ -76,21 +82,15 @@ LAB05_RAW=$(mktemp -d "$PWD/.local/lab05-run.XXXXXX")
 test -z "$(kubectl get namespace lab05 --ignore-not-found -o name)"
 test -z "$(kubectl -n kube-system get pod lab05-probe --ignore-not-found -o name)"
 lab05_cleanup() {
-  local failed=0 ingress_removed=0
+  local failed=0
   printf '%s cleanup started\n' "$(date -u +%FT%TZ)"
-  if kubectl -n lab05 delete ingress web --ignore-not-found --timeout=180s; then
-    ingress_removed=1
-  else
-    failed=1
-  fi
+  kubectl -n lab05 delete ingress web --ignore-not-found --timeout=180s || failed=1
   kubectl -n lab05 delete networkpolicy web-same-namespace-only --ignore-not-found --timeout=60s || failed=1
   kubectl -n kube-system delete pod lab05-probe --ignore-not-found --timeout=60s || failed=1
   kubectl -n lab05 delete pod lab05-probe --ignore-not-found --timeout=60s || failed=1
-  # Keep the namespace if the Ingress finalizer still needs reconciliation.
-  if [ "$ingress_removed" -eq 1 ]; then
-    kubectl delete namespace lab05 --ignore-not-found --timeout=180s || failed=1
-  fi
-  printf '%s cleanup exit=%s; verify AWS deletion before Terraform teardown\n' "$(date -u +%FT%TZ)" "$failed"
+  # Kubernetes deletion does not prove asynchronous AWS deletion completed.
+  # Always retain the namespace until the AWS checks at the end of this lab pass.
+  printf '%s entry-point cleanup exit=%s; namespace retained pending AWS deletion checks\n' "$(date -u +%FT%TZ)" "$failed"
   return "$failed"
 }
 lab05_exit() {
@@ -118,6 +118,12 @@ kubectl -n lab05 describe ingress web
 ```
 
 Wait for an ALB hostname, then request the application:
+
+A hostname can be assigned while the ALB is still provisioning. Confirm AWS
+reports the ALB active and its hostname resolves before attributing an HTTP
+failure to the backend. Curl exit `6` means DNS resolution failed; preserve that
+capture and repeat after provisioning. It does not demonstrate the wrong-port
+failure.
 
 ```sh
 LAB05_HOST=$(kubectl -n lab05 get ingress web -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
@@ -432,10 +438,28 @@ test "$(curl -sS --connect-timeout 3 --max-time 10 -o "$LAB05_RAW/alb-after-body
 exit
 ```
 
-The trap writes `cleanup.txt` and attempts every independent cleanup operation,
-even if one fails. It retains the namespace if Ingress deletion fails so the
-controller can finish reconciliation. Preserve the evidence, restore access,
+The trap writes `cleanup.txt` and attempts every independent entry-point/probe
+cleanup operation, even if one fails. It always retains the namespace until AWS
+deletion has been verified. Preserve the evidence, restore access,
 and rerun the named deletions from `lab05_cleanup` if cleanup was incomplete.
 
-Confirm AWS deleted the ALB and target groups; keep the controller running until
-cleanup finishes. Deleting the `lab05` namespace also removes its diagnostic pod.
+After entry-point cleanup, use `aws elbv2 wait load-balancers-deleted` with the
+recorded ALB ARN and explicit region. Verify each recorded target group and
+dedicated security group is absent and the associated ENIs are released. Treat
+only the corresponding resource-not-found response or a successful empty
+inventory as absence; authorization errors and timeouts are failures. Keep the
+controller and namespace running if any deletion remains unresolved. Do not
+strip finalizers or manually delete shared AWS resources.
+
+Only after these checks pass, remove the owned namespace:
+
+```sh
+kubectl delete namespace lab05 --wait=true --timeout=180s
+kubectl get namespace lab05 --ignore-not-found -o name
+```
+
+The final query must succeed with empty output. Record this separately from the
+trap's entry-point cleanup result; preserve shared workloads and infrastructure.
+
+See [the sanitized execution evidence](../evidence/ingress-outage/summary.md)
+for the observed wrong-port and policy failures, recoveries, and cleanup checks.

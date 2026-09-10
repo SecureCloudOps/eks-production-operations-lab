@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-09",
+  "control_plane_version": "1.36",
+  "nodes": {
+    "count": 4,
+    "ready": 4,
+    "versions": [
+      "v1.36.1-eks-a3a0722"
+    ]
+  },
+  "node_groups": {
+    "system": {
+      "status": "ACTIVE",
+      "minSize": 1,
+      "maxSize": 1,
+      "desiredSize": 1
+    },
+    "production-apps": {
+      "status": "ACTIVE",
+      "minSize": 2,
+      "maxSize": 2,
+      "desiredSize": 2
+    },
+    "canary": {
+      "status": "ACTIVE",
+      "minSize": 1,
+      "maxSize": 1,
+      "desiredSize": 1
+    }
+  },
+  "shared_deployments": {
+    "http-demo": {
+      "desired": 2,
+      "ready": 2,
+      "available": 2
+    },
+    "controller": {
+      "desired": 2,
+      "ready": 2,
+      "available": 2
+    }
+  },
+  "prometheus": {
+    "active_targets": 25,
+    "healthy_targets": 25
+  },
+  "terraform": {
+    "plan_exit": 0,
+    "resource_actions": [],
+    "drift": [],
+    "output_actions": []
+  },
+  "private_endpoint_access": true,
+  "operator_allowlist_entries": 2,
+  "default_readiness_gate_injection": "enabled"
+}

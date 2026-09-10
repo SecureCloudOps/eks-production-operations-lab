@@ -1,0 +1,32 @@
+{
+  "run": "lab05-20260909",
+  "starting_commit": "f82e7bc",
+  "source": "Operator-executed commands; assistant local capture inspection and repository edits.",
+  "transformations": [
+    "Selected diagnostic values and counts only; summaries are not verbatim raw transcripts.",
+    "Omitted account IDs, ARNs, addresses, endpoint/ALB hostnames, resource IDs, local absolute paths, state, plans, private inputs and credentials.",
+    "Source keys are relative capture aliases under the ignored run directory.",
+    "SHA-256 hashes correlate selected raw captures retained locally; no private file contents are embedded."
+  ],
+  "raw_sha256": {
+    "netpol-baseline.2iDdqwQX/baseline-kube-system.txt": "92a2b329d3f774ea88e5441abb32c3fe7e57208b565784ea0aa435fe1127607f",
+    "netpol-deny.9eFrGOdd/result.txt": "32f23749472345df5b7b32267a91157303bcf81a762d63dcdbc0ae411cf87eb1",
+    "netpol-recovery.8eZ21TSL/result.txt": "2a3dc0bd06555d21fab59c4bcd540ceef7bfed170484b8687612e6dde7e7cc50",
+    "netpol-cleanup.vvNTZ94t/result.txt": "307e2c4ad2a0bceb3a159cb4f05a2401834f205227a9bdde281e103561760722",
+    "wrong-port.8ymti1oa/wrong-port-curl-exit.txt": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+    "wrong-port.oq6OZt5K/target-health-after.json": "8a0cc7e7b8b4a4a8e767108f2c68e04a1fc81e99d9b113bbcce9fdd97adb2266",
+    "wrong-port.oq6OZt5K/wrong-port-headers.txt": "e6e51ada4ae75231f77f19061aa1f114ed04c278c43a53e1e75e8639fffef5e8",
+    "wrong-port.oq6OZt5K/listeners.txt": "4279ba988a6e0e072ad515680a4a5e8607afc5b9a5b2b15636979d7f66823fa2",
+    "port-fix.9OGElwKU/result.txt": "3d0bb86bb67effd32ef868e3affe8ad2b304ad80b7058926533692761ff8a411",
+    "ingress-policy-deny.ArMz6tnJ/unhealthy-targets.json": "cf1eefd41299a0aa35d1a214b4fb2d8a03fd2b021838c80b820c0e7526ac22e4",
+    "ingress-policy-deny.ArMz6tnJ/alb-policy-headers.txt": "4bff35fcfbe4f865b7d87d0a2915164b7aa9204ddeccf246c1f29d2b1ddd790c",
+    "ingress-policy-deny.ArMz6tnJ/result.txt": "036a3390eec01391bf6bf78cf96bdd1915da98ac3b3a6ee4aae4feb18be1ac3d",
+    "ingress-policy-recovery.RhaqmhuH/result.txt": "91904397b3c4e65fb2ca33ce8e855cc4f009a724d1ca91c3f40f63f7c5513e77",
+    "ingress-delete.1LAWqpBe/cleanup-inventory.json": "1a8525dc2a3406290d473560898693fec6e4dac05c8e6233b59ceb44eea8410e",
+    "final-k8s-cleanup.wbHGqJcd/result.txt": "a91c3b8c534c548403557d17181516ec47bb2bd700db5694ca766f65f7ca59d5",
+    "final-verify.ExWb47tI/plan-summary.json": "f41738f0a6aff0ac3785be4af5943cf6246f6596721403d98196f8396756174f",
+    "final-verify.ExWb47tI/prometheus-targets.json": "7a9c6ac9f84ac080d2d4e612aa2d168dbbee146c0f3bb3f0127135e375816a8f",
+    "final-verify.ExWb47tI/prometheus-alerts.json": "c9c48ee926cb476030eadceac41a7edc60758c9e44afbdc18be462f5be27da29",
+    "aws-cleanup-check.k19md11M/aws-deletion-verified.json": "07f64bc194b7c8baf0aa69aea8164f2a977eabb2737b574a78daf7315f3bf345"
+  }
+}

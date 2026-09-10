@@ -1,0 +1,8 @@
+Sanitized observations; 2026-09-09
+Initial provisioning attempt: HTTP 000, curl exit 6 (DNS unresolved; not backend evidence).
+Confirmed failure: HTTP/1.1 502 Bad Gateway; curl exit 0.
+ALB response Date: Wed, 09 Sep 2026 17:43:14 GMT.
+Registered port: 8080; target: unhealthy; reason: Target.FailedHealthChecks.
+Application loopback port 3000: HTTP 200.
+Application loopback port 8080: connect errno 111 (connection refused).
+After port correction: ALB HTTP 200; target healthy on port 3000.

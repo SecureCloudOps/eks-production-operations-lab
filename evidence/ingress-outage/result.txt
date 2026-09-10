@@ -1,0 +1,10 @@
+Lab 05 completed on 2026-09-09.
+Native policy preflight: unchanged target allowed -> curl timeout 28 -> allowed.
+Wrong-port failure: ALB 502; target unhealthy on 8080; listener on 3000.
+Port remediation: Service port/targetPort and Ingress backend set to 3000.
+Port recovery: ALB HTTP 200; healthy target; unchanged application pod.
+Policy failure: ALB HTTP 504; target unhealthy on 3000, Target.Timeout.
+During policy: same-namespace HTTP 200; kube-system curl exit 28 / HTTP 000.
+After deleting only policy: both probes and ALB HTTP 200; target healthy.
+Application pod identity/IP and port mapping unchanged across policy test.
+No lasting replacement policy deployed; deliberate source fixtures retained.

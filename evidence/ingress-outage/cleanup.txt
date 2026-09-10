@@ -1,0 +1,13 @@
+Verified cleanup order, 2026-09-09:
+1. Removed isolated preflight namespace and dedicated system client Deployment.
+2. Removed Lab 05 NetworkPolicy and verified application recovery.
+3. Recorded ALB, old/new target groups, dedicated/shared SG ownership and ALB ENIs.
+4. Deleted only lab05/web Ingress; retained namespace.
+5. Verified AWS absence: ALB=0, recorded target groups=0, dedicated SG=0, ALB ENIs=0.
+   Inventory covered one ALB, two target groups, one dedicated SG and three ENIs.
+   Shared backend SG was not manually deleted. API errors did not count as absence.
+6. Deleted owned kube-system/lab05-probe and then lab05 namespace.
+7. Verified both lab namespaces and external probes absent; no NetworkPolicies remain.
+8. Verified four Ready nodes, shared demo/controller 2/2, Prometheus 25/25 up.
+9. Final Terraform normal plan exit 0; no actions or drift; state file unchanged by plan.
+Raw evidence and earlier lab evidence preserved. Shared infrastructure remains deployed.
