@@ -14,7 +14,7 @@ LAB02_MANIFEST ?= kubernetes/chaos/node-drain-failure.yaml
 LAB03_MANIFEST ?= kubernetes/chaos/memory-leak.yaml
 LAB04_MANIFEST ?= kubernetes/chaos/irsa-security-breach.yaml
 
-.PHONY: help init validate validate-schemas up down deploy-apps lab01-trigger lab02-trigger lab03-trigger lab04-trigger lab05-trigger
+.PHONY: help init validate validate-schemas test up down deploy-apps lab01-trigger lab02-trigger lab03-trigger lab04-trigger lab05-trigger
 
 help:
 	@printf '%s\n' \
@@ -44,6 +44,10 @@ validate:
 	$(TERRAFORM) -chdir="$(TERRAFORM_DIR)" validate -no-color
 	ruby -e 'require "yaml"; Dir.glob(["kubernetes/**/*.{yaml,yml}", "terraform/*.{yaml,yml}", ".github/workflows/*.{yaml,yml}"]).each { |f| YAML.parse_stream(File.read(f)); puts "Parsed #{f}" }'
 	$(PYTHON) scripts/check-docs.py
+	$(MAKE) test
+
+test:
+	$(PYTHON) -m unittest discover -s tests -v
 
 validate-schemas:
 	$(KUBECONFORM) -strict -summary -kubernetes-version 1.35.0 kubernetes/

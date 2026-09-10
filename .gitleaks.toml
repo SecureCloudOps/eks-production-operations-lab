@@ -1,0 +1,17 @@
+title = "EKS lab publication checks"
+
+[extend]
+useDefault = true
+
+# Reviewed SHA-256 provenance values, not API keys. Both the exact digest and
+# this single provenance path must match; do not exempt the evidence directory.
+[[allowlists]]
+description = "Two verified Lab 04 source hashes"
+condition = "AND"
+targetRules = ["generic-api-key"]
+paths = ['''^evidence/irsa-breach/provenance\.json$''']
+regexTarget = "match"
+regexes = [
+  "31f1f0a092cfdc6587c931923da09fc537545478aca3c5dcc2c060b73a91e4d9",
+  "3c5d07d584cfa9304d62124b3002886e541b523993543e900d0ce114cd2ad86d",
+]

@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: hashicorp/setup-terraform@v3
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
         with:
           terraform_version: 1.14.3
       - name: Initialize validation dependencies
@@ -23,12 +26,28 @@ jobs:
       - name: Install kubeconform
         env:
           KUBECONFORM_VERSION: v0.6.7
+          KUBECONFORM_SHA256: 95f14e87aa28c09d5941f11bd024c1d02fdc0303ccaa23f61cef67bc92619d73
         run: |
           mkdir -p "$RUNNER_TEMP/kubeconform"
           curl --fail --silent --show-error --location \
             "https://github.com/yannh/kubeconform/releases/download/${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz" \
             -o "$RUNNER_TEMP/kubeconform.tar.gz"
+          printf '%s  %s\n' "$KUBECONFORM_SHA256" "$RUNNER_TEMP/kubeconform.tar.gz" | sha256sum --check --strict
           tar -xzf "$RUNNER_TEMP/kubeconform.tar.gz" -C "$RUNNER_TEMP/kubeconform" kubeconform
           echo "$RUNNER_TEMP/kubeconform" >> "$GITHUB_PATH"
       - name: Kubernetes schemas
         run: make validate-schemas
+      - name: Verify published history privacy
+        run: python3 scripts/check-publication.py --history HEAD
+      - name: Install and run Gitleaks
+        env:
+          GITLEAKS_VERSION: 8.30.0
+          GITLEAKS_SHA256: 79a3ab579b53f71efd634f3aaf7e04a0fa0cf206b7ed434638d1547a2470a66e
+        run: |
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          curl --fail --silent --show-error --location \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            -o "$RUNNER_TEMP/gitleaks.tar.gz"
+          printf '%s  %s\n' "$GITLEAKS_SHA256" "$RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP/gitleaks" gitleaks
+          "$RUNNER_TEMP/gitleaks/gitleaks" git . --log-opts=HEAD --config=.gitleaks.toml --redact

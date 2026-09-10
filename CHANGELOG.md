@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Record verified full teardown and correct remaining baseline hostname disclosure.
+- Pin CI actions, verify downloaded tools, scan published history, and test cleanup failure paths.
+
 - Record all five executed labs, including the original upgrade failures, later controlled-drain validation, recoveries and cleanup evidence.
 - Add a project overview, architecture diagram, evidence index, access guide and contribution workflow.
 - Share local/CI validation for documentation links, structured evidence and script syntax; add a guidance-only Lab 05 target.

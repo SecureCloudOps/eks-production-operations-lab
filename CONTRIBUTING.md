@@ -58,3 +58,24 @@ outputs and private infrastructure identifiers out of descriptions and issues.
 The repository uses the [MIT License](LICENSE). Preserve applicable upstream
 licenses and attribution when adapting third-party material; see
 [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Publication and CI safeguards
+
+`make test` exercises the cleanup gate with mocked AWS responses, including its
+integration with `make down`; it never invokes real cloud mutations. `make validate`
+includes these tests. The gate rejects missing/null response collections as well
+as AWS failures and remaining resources.
+
+Before publication, run `python3 scripts/check-publication.py --history HEAD`
+and `gitleaks git . --log-opts=HEAD --config=.gitleaks.toml --redact` using
+Gitleaks 8.30.0. The publication guard checks captured hostnames and private artifact
+paths; it complements secret detection and manual review, rather than proving
+that every possible identifying value is absent. The two Gitleaks exceptions
+require both the exact reviewed source hash and the Lab 04 provenance path.
+
+CI checks full reachable history. Actions use commit SHAs; kubeconform and
+Gitleaks archives are checked against committed release SHA-256 values before
+execution. When updating a tool, review the upstream release and checksum, update
+both together, and validate before merging. Do not disable integrity checks to
+resolve a download failure. Runtime image tags and Helm/module releases still
+need their separate compatibility and vulnerability reviews.

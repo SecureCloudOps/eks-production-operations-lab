@@ -24,6 +24,12 @@ aws ec2 describe-security-groups --region "$AWS_REGION" \
 aws ec2 describe-network-interfaces --region "$AWS_REGION" \
   --filters "Name=vpc-id,Values=$VPC_ID" 'Name=description,Values=ELB*' > "$work/enis.json"
 
+# A missing/null collection is an invalid response, not an empty inventory.
+jq -e '.LoadBalancers | type == "array"' "$work/lbs.json" >/dev/null
+jq -e '.TargetGroups | type == "array"' "$work/tgs.json" >/dev/null
+jq -e '.SecurityGroups | type == "array"' "$work/sgs.json" >/dev/null
+jq -e '.NetworkInterfaces | type == "array"' "$work/enis.json" >/dev/null
+
 # All ALBs/NLBs and target groups in this dedicated VPC must be gone, including
 # untagged/partially created ones. AWS failures stop this script; they are not absence.
 lbs=$(jq -er --arg vpc "$VPC_ID" '[.LoadBalancers[] | select(.VpcId == $vpc)] | length' "$work/lbs.json")

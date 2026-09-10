@@ -103,7 +103,8 @@ make validate
 Initialization downloads pinned dependencies and writes the local provider cache;
 it does not create infrastructure. `make validate` checks Terraform format/schema,
 YAML syntax, shell/Python syntax, local Markdown link destinations and structured
-evidence. It neither plans against AWS nor applies resources.
+evidence, plus mocked cleanup-gate regression tests. It neither plans against AWS
+nor applies resources.
 
 For Kubernetes schema checks, install kubeconform v0.6.7 and run:
 
